@@ -121,10 +121,6 @@
             UIEdgeInsets returnValue;
             [invocation getReturnValue:&returnValue];
             return [NSValue valueWithUIEdgeInsets:returnValue];
-        } else if ([returnTypeString isEqualToString:@"{NSDirectionalEdgeInsets=dddd}"]) {
-            NSDirectionalEdgeInsets returnValue;
-            [invocation getReturnValue:&returnValue];
-            return [NSValue valueWithDirectionalEdgeInsets:returnValue];
         } else if ([returnTypeString isEqualToString:@"{UIOffset=dd}"]) {
             UIOffset returnValue;
             [invocation getReturnValue:&returnValue];
@@ -133,20 +129,31 @@
             SEL returnValue;
             [invocation getReturnValue:&returnValue];
             return NSStringFromSelector(returnValue);
-        } else if ([returnTypeString isEqualToString:@"?"]) {
-            //? unknown type
-            @try {
-                id returnValue;
-                [invocation getReturnValue:&returnValue];
-                return returnValue;
-            } @catch (NSException *exception) {
-                NSLog(@"%@", exception.description);
-            } @finally {
-                return nil;
+        } else {
+            if ([returnTypeString isEqualToString:@"{NSDirectionalEdgeInsets=dddd}"]) {
+                if (@available(iOS 11.0, *)) {
+                    NSDirectionalEdgeInsets returnValue;
+                    [invocation getReturnValue:&returnValue];
+                    return [NSValue valueWithDirectionalEdgeInsets:returnValue];
+                } else {
+                    // Fallback on earlier versions
+                }
+            } else if ([returnTypeString isEqualToString:@"?"]) {
+                //? unknown type
+                @try {
+                    id returnValue;
+                    [invocation getReturnValue:&returnValue];
+                    return returnValue;
+                } @catch (NSException *exception) {
+                    NSLog(@"%@", exception.description);
+                } @finally {
+                    return nil;
+                }
             }
         }
     }
     return nil;
 }
+
 
 @end
