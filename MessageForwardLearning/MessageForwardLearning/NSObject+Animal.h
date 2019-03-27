@@ -1,8 +1,8 @@
 //
-//  MFLAnimal.h
+//  MFLBird+Animal.h
 //  MessageForwardLearning
 //
-//  Created by txooo on 2019/3/26.
+//  Created by txooo on 2019/3/27.
 //  Copyright © 2019 txooo. All rights reserved.
 //
 
@@ -10,11 +10,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MFLAnimal : NSObject
+@interface NSObject (Animal)
 
-- (void)eat;
-- (void)run;
-//- (void)sleep;
+// 让所有子类都有sleep方法
+- (void)sleep;
 
 @end
 

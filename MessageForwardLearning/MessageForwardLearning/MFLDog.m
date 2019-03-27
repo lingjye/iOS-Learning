@@ -26,9 +26,15 @@
 
 @implementation MFLDog
 
-// 第二步 调用未实现的实例方法 在该方法中返回新的实例, 会转发到新的对象上调用
+// 第二步 快速消息转发 调用未实现的实例方法 在该方法中返回新的实例, 会转发到新的对象上调用
+// 特点:简单、快速、但仅能转发给一个对象。
 - (id)forwardingTargetForSelector:(SEL)aSelector {
     return [[MFLSmallDog alloc] init];
+}
+
+// forwardingTargetForSelector返回nil 调用该方法
+- (void)doesNotRecognizeSelector:(SEL)aSelector {
+    NSLog(@"%s -- %@", __func__, NSStringFromSelector(aSelector));
 }
 
 @end

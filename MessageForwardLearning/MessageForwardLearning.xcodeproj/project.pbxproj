@@ -20,6 +20,10 @@
 		2E6231E4224A000A009C7617 /* MFLDog.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6231E3224A000A009C7617 /* MFLDog.m */; };
 		2E6231E7224A0E13009C7617 /* MFLCat.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6231E6224A0E13009C7617 /* MFLCat.m */; };
 		2E6231EA224A1274009C7617 /* NSObject+MSLPerformSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6231E9224A1274009C7617 /* NSObject+MSLPerformSelector.m */; };
+		2E85E23E224B1BBF008FD3E6 /* MFLBird.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E85E23D224B1BBF008FD3E6 /* MFLBird.m */; };
+		2E85E241224B1D18008FD3E6 /* MFLParrot.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E85E240224B1D18008FD3E6 /* MFLParrot.m */; };
+		2E85E244224B234F008FD3E6 /* MFLParrot+Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E85E243224B234F008FD3E6 /* MFLParrot+Animal.m */; };
+		2E85E247224B2997008FD3E6 /* NSObject+Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E85E246224B2997008FD3E6 /* NSObject+Animal.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +70,14 @@
 		2E6231E6224A0E13009C7617 /* MFLCat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFLCat.m; sourceTree = "<group>"; };
 		2E6231E8224A1274009C7617 /* NSObject+MSLPerformSelector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+MSLPerformSelector.h"; sourceTree = "<group>"; };
 		2E6231E9224A1274009C7617 /* NSObject+MSLPerformSelector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MSLPerformSelector.m"; sourceTree = "<group>"; };
+		2E85E23C224B1BBF008FD3E6 /* MFLBird.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFLBird.h; sourceTree = "<group>"; };
+		2E85E23D224B1BBF008FD3E6 /* MFLBird.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFLBird.m; sourceTree = "<group>"; };
+		2E85E23F224B1D18008FD3E6 /* MFLParrot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFLParrot.h; sourceTree = "<group>"; };
+		2E85E240224B1D18008FD3E6 /* MFLParrot.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFLParrot.m; sourceTree = "<group>"; };
+		2E85E242224B234F008FD3E6 /* MFLParrot+Animal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MFLParrot+Animal.h"; sourceTree = "<group>"; };
+		2E85E243224B234F008FD3E6 /* MFLParrot+Animal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MFLParrot+Animal.m"; sourceTree = "<group>"; };
+		2E85E245224B2997008FD3E6 /* NSObject+Animal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Animal.h"; sourceTree = "<group>"; };
+		2E85E246224B2997008FD3E6 /* NSObject+Animal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Animal.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +134,14 @@
 				2E6231AE2249FC41009C7617 /* MFLViewController.m */,
 				2E6231DC2249FFED009C7617 /* MFLAnimal.h */,
 				2E6231DD2249FFED009C7617 /* MFLAnimal.m */,
+				2E85E23C224B1BBF008FD3E6 /* MFLBird.h */,
+				2E85E23D224B1BBF008FD3E6 /* MFLBird.m */,
+				2E85E23F224B1D18008FD3E6 /* MFLParrot.h */,
+				2E85E240224B1D18008FD3E6 /* MFLParrot.m */,
+				2E85E242224B234F008FD3E6 /* MFLParrot+Animal.h */,
+				2E85E243224B234F008FD3E6 /* MFLParrot+Animal.m */,
+				2E85E245224B2997008FD3E6 /* NSObject+Animal.h */,
+				2E85E246224B2997008FD3E6 /* NSObject+Animal.m */,
 				2E6231DF2249FFFE009C7617 /* MFLPig.h */,
 				2E6231E02249FFFE009C7617 /* MFLPig.m */,
 				2E6231E2224A000A009C7617 /* MFLDog.h */,
@@ -287,13 +307,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E85E247224B2997008FD3E6 /* NSObject+Animal.m in Sources */,
 				2E6231E12249FFFE009C7617 /* MFLPig.m in Sources */,
 				2E6231AF2249FC41009C7617 /* MFLViewController.m in Sources */,
 				2E6231E7224A0E13009C7617 /* MFLCat.m in Sources */,
 				2E6231EA224A1274009C7617 /* NSObject+MSLPerformSelector.m in Sources */,
 				2E6231BA2249FC42009C7617 /* main.m in Sources */,
+				2E85E241224B1D18008FD3E6 /* MFLParrot.m in Sources */,
+				2E85E23E224B1BBF008FD3E6 /* MFLBird.m in Sources */,
 				2E6231AC2249FC41009C7617 /* AppDelegate.m in Sources */,
 				2E6231E4224A000A009C7617 /* MFLDog.m in Sources */,
+				2E85E244224B234F008FD3E6 /* MFLParrot+Animal.m in Sources */,
 				2E6231DE2249FFED009C7617 /* MFLAnimal.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

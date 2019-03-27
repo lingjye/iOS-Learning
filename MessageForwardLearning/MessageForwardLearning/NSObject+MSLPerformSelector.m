@@ -7,7 +7,7 @@
 //
 
 #import "NSObject+MSLPerformSelector.h"
-#import <CoreGraphics/CoreGraphics.h>
+#import <UIKit/UIKit.h>
 
 @implementation NSObject (MSLPerformSelector)
 
@@ -36,9 +36,8 @@
     // 调用方法
     [invocation invoke];
     
-    // 获取返回值
-    
-    if (signature.methodReturnLength) { // 有返回值类型，才去获得返回值
+    // 获取返回值,有返回值类型，才去获得返回值, 列举了几种常见类型, 基本可以满足需求
+    if (signature.methodReturnLength) {
         NSLog(@"---%s", signature.methodReturnType);
         NSString *returnTypeString = [NSString stringWithUTF8String:signature.methodReturnType];
         if ([returnTypeString isEqualToString:@"@"]) {
@@ -102,13 +101,49 @@
             Class returnValue;
             [invocation getReturnValue:&returnValue];
             return returnValue;
-        } else if ([returnTypeString isEqualToString:@"?"]) {
-            //: return SEL
-            //{CGRect={CGPoint=dd}{CGSize=dd}} CGRect
-            // unknown type
-            id returnValue;
+        } else if ([returnTypeString isEqualToString:@"{CGRect={CGPoint=dd}{CGSize=dd}}"]) {
+            CGRect returnValue;
             [invocation getReturnValue:&returnValue];
-            return returnValue;
+            return [NSValue valueWithCGRect:returnValue];
+        } else if ([returnTypeString isEqualToString:@"{CGSize=dd}"]) {
+            CGSize returnValue;
+            [invocation getReturnValue:&returnValue];
+            return [NSValue valueWithCGSize:returnValue];
+        } else if ([returnTypeString isEqualToString:@"{CGPoint=dd}"]) {
+            CGPoint returnValue;
+            [invocation getReturnValue:&returnValue];
+            return [NSValue valueWithCGPoint:returnValue];
+        } else if ([returnTypeString isEqualToString:@"{_NSRange=QQ}"]) {
+            NSRange returnValue;
+            [invocation getReturnValue:&returnValue];
+            return [NSValue valueWithRange:returnValue];
+        } else if ([returnTypeString isEqualToString:@"{UIEdgeInsets=dddd}"]) {
+            UIEdgeInsets returnValue;
+            [invocation getReturnValue:&returnValue];
+            return [NSValue valueWithUIEdgeInsets:returnValue];
+        } else if ([returnTypeString isEqualToString:@"{NSDirectionalEdgeInsets=dddd}"]) {
+            NSDirectionalEdgeInsets returnValue;
+            [invocation getReturnValue:&returnValue];
+            return [NSValue valueWithDirectionalEdgeInsets:returnValue];
+        } else if ([returnTypeString isEqualToString:@"{UIOffset=dd}"]) {
+            UIOffset returnValue;
+            [invocation getReturnValue:&returnValue];
+            return [NSValue valueWithUIOffset:returnValue];
+        } else if ([returnTypeString isEqualToString:@":"]) {
+            SEL returnValue;
+            [invocation getReturnValue:&returnValue];
+            return NSStringFromSelector(returnValue);
+        } else if ([returnTypeString isEqualToString:@"?"]) {
+            //? unknown type
+            @try {
+                id returnValue;
+                [invocation getReturnValue:&returnValue];
+                return returnValue;
+            } @catch (NSException *exception) {
+                NSLog(@"%@", exception.description);
+            } @finally {
+                return nil;
+            }
         }
     }
     return nil;

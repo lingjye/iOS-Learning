@@ -33,6 +33,11 @@
     return YES;
 }
 
+// 未找到要调用的方法
+- (void)doesNotRecognizeSelector:(SEL)aSelector {
+    NSLog(@"%s --- %@", __func__, NSStringFromSelector(aSelector));
+}
+
 - (void)eat {
     NSLog(@"%@ --- %s", [self class], __func__);
 }

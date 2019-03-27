@@ -14,9 +14,9 @@
     NSLog(@"%@ --- %s", [self class], __func__);
 }
 
-- (void)sleep {
-    NSLog(@"%@ --- %s", [self class], __func__);
-}
+//- (void)sleep {
+//    NSLog(@"%@ --- %s", [self class], __func__);
+//}
 
 - (void)run {
     NSLog(@"%@ --- %s", [self class], __func__);
