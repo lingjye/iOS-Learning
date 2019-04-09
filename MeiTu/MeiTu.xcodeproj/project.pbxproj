@@ -1,0 +1,639 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2E14FCD322549F7200388366 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E14FCD222549F7200388366 /* AppDelegate.m */; };
+		2E14FCD622549F7200388366 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E14FCD522549F7200388366 /* ViewController.m */; };
+		2E14FCD922549F7200388366 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E14FCD722549F7200388366 /* Main.storyboard */; };
+		2E14FCDB22549F7400388366 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E14FCDA22549F7400388366 /* Assets.xcassets */; };
+		2E14FCDE22549F7400388366 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E14FCDC22549F7400388366 /* LaunchScreen.storyboard */; };
+		2E14FCE122549F7400388366 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E14FCE022549F7400388366 /* main.m */; };
+		2E14FCEB22549F7400388366 /* MeiTuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E14FCEA22549F7400388366 /* MeiTuTests.m */; };
+		2E14FCF622549F7400388366 /* MeiTuUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E14FCF522549F7400388366 /* MeiTuUITests.m */; };
+		2E14FD052254A13F00388366 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E14FD042254A13F00388366 /* WelcomeViewController.m */; };
+		2E14FD082254A46200388366 /* 第1页@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E14FD072254A46200388366 /* 第1页@3x.png */; };
+		2E14FD0A2254A46800388366 /* 第2页@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E14FD092254A46800388366 /* 第2页@3x.png */; };
+		2E14FD0C2254A46D00388366 /* 第3页@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E14FD0B2254A46D00388366 /* 第3页@3x.png */; };
+		2E14FD0E2254A47200388366 /* 第4页@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E14FD0D2254A47200388366 /* 第4页@3x.png */; };
+		2E14FD132254A82700388366 /* MTLImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E14FD122254A82700388366 /* MTLImageHelper.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2E14FCE722549F7400388366 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E14FCC622549F7200388366 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E14FCCD22549F7200388366;
+			remoteInfo = MeiTu;
+		};
+		2E14FCF222549F7400388366 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E14FCC622549F7200388366 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E14FCCD22549F7200388366;
+			remoteInfo = MeiTu;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2E14FCCE22549F7200388366 /* MeiTu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeiTu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E14FCD122549F7200388366 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2E14FCD222549F7200388366 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2E14FCD422549F7200388366 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2E14FCD522549F7200388366 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2E14FCD822549F7200388366 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2E14FCDA22549F7400388366 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2E14FCDD22549F7400388366 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2E14FCDF22549F7400388366 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E14FCE022549F7400388366 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2E14FCE622549F7400388366 /* MeiTuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeiTuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E14FCEA22549F7400388366 /* MeiTuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeiTuTests.m; sourceTree = "<group>"; };
+		2E14FCEC22549F7400388366 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E14FCF122549F7400388366 /* MeiTuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeiTuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E14FCF522549F7400388366 /* MeiTuUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeiTuUITests.m; sourceTree = "<group>"; };
+		2E14FCF722549F7400388366 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E14FD032254A13F00388366 /* WelcomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
+		2E14FD042254A13F00388366 /* WelcomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
+		2E14FD072254A46200388366 /* 第1页@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "第1页@3x.png"; sourceTree = "<group>"; };
+		2E14FD092254A46800388366 /* 第2页@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "第2页@3x.png"; sourceTree = "<group>"; };
+		2E14FD0B2254A46D00388366 /* 第3页@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "第3页@3x.png"; sourceTree = "<group>"; };
+		2E14FD0D2254A47200388366 /* 第4页@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "第4页@3x.png"; sourceTree = "<group>"; };
+		2E14FD112254A82700388366 /* MTLImageHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTLImageHelper.h; sourceTree = "<group>"; };
+		2E14FD122254A82700388366 /* MTLImageHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTLImageHelper.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2E14FCCB22549F7200388366 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E14FCE322549F7400388366 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E14FCEE22549F7400388366 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2E14FCC522549F7200388366 = {
+			isa = PBXGroup;
+			children = (
+				2E14FD062254A44B00388366 /* Resource */,
+				2E14FCD022549F7200388366 /* MeiTu */,
+				2E14FCE922549F7400388366 /* MeiTuTests */,
+				2E14FCF422549F7400388366 /* MeiTuUITests */,
+				2E14FCCF22549F7200388366 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2E14FCCF22549F7200388366 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2E14FCCE22549F7200388366 /* MeiTu.app */,
+				2E14FCE622549F7400388366 /* MeiTuTests.xctest */,
+				2E14FCF122549F7400388366 /* MeiTuUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E14FCD022549F7200388366 /* MeiTu */ = {
+			isa = PBXGroup;
+			children = (
+				2E14FD0F2254A7B100388366 /* Utils */,
+				2E14FCD122549F7200388366 /* AppDelegate.h */,
+				2E14FCD222549F7200388366 /* AppDelegate.m */,
+				2E14FCD422549F7200388366 /* ViewController.h */,
+				2E14FCD522549F7200388366 /* ViewController.m */,
+				2E14FD032254A13F00388366 /* WelcomeViewController.h */,
+				2E14FD042254A13F00388366 /* WelcomeViewController.m */,
+				2E14FCD722549F7200388366 /* Main.storyboard */,
+				2E14FCDA22549F7400388366 /* Assets.xcassets */,
+				2E14FCDC22549F7400388366 /* LaunchScreen.storyboard */,
+				2E14FCDF22549F7400388366 /* Info.plist */,
+				2E14FCE022549F7400388366 /* main.m */,
+			);
+			path = MeiTu;
+			sourceTree = "<group>";
+		};
+		2E14FCE922549F7400388366 /* MeiTuTests */ = {
+			isa = PBXGroup;
+			children = (
+				2E14FCEA22549F7400388366 /* MeiTuTests.m */,
+				2E14FCEC22549F7400388366 /* Info.plist */,
+			);
+			path = MeiTuTests;
+			sourceTree = "<group>";
+		};
+		2E14FCF422549F7400388366 /* MeiTuUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2E14FCF522549F7400388366 /* MeiTuUITests.m */,
+				2E14FCF722549F7400388366 /* Info.plist */,
+			);
+			path = MeiTuUITests;
+			sourceTree = "<group>";
+		};
+		2E14FD062254A44B00388366 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				2E14FD072254A46200388366 /* 第1页@3x.png */,
+				2E14FD092254A46800388366 /* 第2页@3x.png */,
+				2E14FD0B2254A46D00388366 /* 第3页@3x.png */,
+				2E14FD0D2254A47200388366 /* 第4页@3x.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		2E14FD0F2254A7B100388366 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2E14FD102254A7BA00388366 /* ImageHelper */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		2E14FD102254A7BA00388366 /* ImageHelper */ = {
+			isa = PBXGroup;
+			children = (
+				2E14FD112254A82700388366 /* MTLImageHelper.h */,
+				2E14FD122254A82700388366 /* MTLImageHelper.m */,
+			);
+			path = ImageHelper;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2E14FCCD22549F7200388366 /* MeiTu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E14FCFA22549F7400388366 /* Build configuration list for PBXNativeTarget "MeiTu" */;
+			buildPhases = (
+				2E14FCCA22549F7200388366 /* Sources */,
+				2E14FCCB22549F7200388366 /* Frameworks */,
+				2E14FCCC22549F7200388366 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MeiTu;
+			productName = MeiTu;
+			productReference = 2E14FCCE22549F7200388366 /* MeiTu.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2E14FCE522549F7400388366 /* MeiTuTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E14FCFD22549F7400388366 /* Build configuration list for PBXNativeTarget "MeiTuTests" */;
+			buildPhases = (
+				2E14FCE222549F7400388366 /* Sources */,
+				2E14FCE322549F7400388366 /* Frameworks */,
+				2E14FCE422549F7400388366 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2E14FCE822549F7400388366 /* PBXTargetDependency */,
+			);
+			name = MeiTuTests;
+			productName = MeiTuTests;
+			productReference = 2E14FCE622549F7400388366 /* MeiTuTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2E14FCF022549F7400388366 /* MeiTuUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E14FD0022549F7400388366 /* Build configuration list for PBXNativeTarget "MeiTuUITests" */;
+			buildPhases = (
+				2E14FCED22549F7400388366 /* Sources */,
+				2E14FCEE22549F7400388366 /* Frameworks */,
+				2E14FCEF22549F7400388366 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2E14FCF322549F7400388366 /* PBXTargetDependency */,
+			);
+			name = MeiTuUITests;
+			productName = MeiTuUITests;
+			productReference = 2E14FCF122549F7400388366 /* MeiTuUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2E14FCC622549F7200388366 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = txooo;
+				TargetAttributes = {
+					2E14FCCD22549F7200388366 = {
+						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
+					};
+					2E14FCE522549F7400388366 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 2E14FCCD22549F7200388366;
+					};
+					2E14FCF022549F7400388366 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 2E14FCCD22549F7200388366;
+					};
+				};
+			};
+			buildConfigurationList = 2E14FCC922549F7200388366 /* Build configuration list for PBXProject "MeiTu" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2E14FCC522549F7200388366;
+			productRefGroup = 2E14FCCF22549F7200388366 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2E14FCCD22549F7200388366 /* MeiTu */,
+				2E14FCE522549F7400388366 /* MeiTuTests */,
+				2E14FCF022549F7400388366 /* MeiTuUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2E14FCCC22549F7200388366 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E14FCDE22549F7400388366 /* LaunchScreen.storyboard in Resources */,
+				2E14FD0A2254A46800388366 /* 第2页@3x.png in Resources */,
+				2E14FD0C2254A46D00388366 /* 第3页@3x.png in Resources */,
+				2E14FD0E2254A47200388366 /* 第4页@3x.png in Resources */,
+				2E14FCDB22549F7400388366 /* Assets.xcassets in Resources */,
+				2E14FD082254A46200388366 /* 第1页@3x.png in Resources */,
+				2E14FCD922549F7200388366 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E14FCE422549F7400388366 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E14FCEF22549F7400388366 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2E14FCCA22549F7200388366 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E14FCD622549F7200388366 /* ViewController.m in Sources */,
+				2E14FD052254A13F00388366 /* WelcomeViewController.m in Sources */,
+				2E14FCE122549F7400388366 /* main.m in Sources */,
+				2E14FD132254A82700388366 /* MTLImageHelper.m in Sources */,
+				2E14FCD322549F7200388366 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E14FCE222549F7400388366 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E14FCEB22549F7400388366 /* MeiTuTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E14FCED22549F7400388366 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E14FCF622549F7400388366 /* MeiTuUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2E14FCE822549F7400388366 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E14FCCD22549F7200388366 /* MeiTu */;
+			targetProxy = 2E14FCE722549F7400388366 /* PBXContainerItemProxy */;
+		};
+		2E14FCF322549F7400388366 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E14FCCD22549F7200388366 /* MeiTu */;
+			targetProxy = 2E14FCF222549F7400388366 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2E14FCD722549F7200388366 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E14FCD822549F7200388366 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2E14FCDC22549F7400388366 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E14FCDD22549F7400388366 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2E14FCF822549F7400388366 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2E14FCF922549F7400388366 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2E14FCFB22549F7400388366 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MeiTu/Info.plist;
+				LD_GENERATE_MAP_FILE = YES;
+				LD_MAP_FILE_PATH = "$(TARGET_TEMP_DIR)/$(PRODUCT_NAME)-LinkMap-$(CURRENT_VARIANT)-$(CURRENT_ARCH).txt";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = txooo.MeiTu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2E14FCFC22549F7400388366 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MeiTu/Info.plist;
+				LD_GENERATE_MAP_FILE = YES;
+				LD_MAP_FILE_PATH = "$(TARGET_TEMP_DIR)/$(PRODUCT_NAME)-LinkMap-$(CURRENT_VARIANT)-$(CURRENT_ARCH).txt";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = txooo.MeiTu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2E14FCFE22549F7400388366 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MeiTuTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = txooo.MeiTuTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MeiTu.app/MeiTu";
+			};
+			name = Debug;
+		};
+		2E14FCFF22549F7400388366 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MeiTuTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = txooo.MeiTuTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MeiTu.app/MeiTu";
+			};
+			name = Release;
+		};
+		2E14FD0122549F7400388366 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MeiTuUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = txooo.MeiTuUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MeiTu;
+			};
+			name = Debug;
+		};
+		2E14FD0222549F7400388366 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MeiTuUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = txooo.MeiTuUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MeiTu;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2E14FCC922549F7200388366 /* Build configuration list for PBXProject "MeiTu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E14FCF822549F7400388366 /* Debug */,
+				2E14FCF922549F7400388366 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E14FCFA22549F7400388366 /* Build configuration list for PBXNativeTarget "MeiTu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E14FCFB22549F7400388366 /* Debug */,
+				2E14FCFC22549F7400388366 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E14FCFD22549F7400388366 /* Build configuration list for PBXNativeTarget "MeiTuTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E14FCFE22549F7400388366 /* Debug */,
+				2E14FCFF22549F7400388366 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E14FD0022549F7400388366 /* Build configuration list for PBXNativeTarget "MeiTuUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E14FD0122549F7400388366 /* Debug */,
+				2E14FD0222549F7400388366 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2E14FCC622549F7200388366 /* Project object */;
+}
