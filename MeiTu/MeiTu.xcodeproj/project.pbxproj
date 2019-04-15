@@ -21,6 +21,11 @@
 		2E14FD0C2254A46D00388366 /* 第3页@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E14FD0B2254A46D00388366 /* 第3页@3x.png */; };
 		2E14FD0E2254A47200388366 /* 第4页@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E14FD0D2254A47200388366 /* 第4页@3x.png */; };
 		2E14FD132254A82700388366 /* MTLImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E14FD122254A82700388366 /* MTLImageHelper.m */; };
+		2E2BA5FF22644C7000287CA7 /* CODE_OF_CONDUCT.md in Resources */ = {isa = PBXBuildFile; fileRef = 2E2BA5F822644C7000287CA7 /* CODE_OF_CONDUCT.md */; };
+		2E2BA60022644C7000287CA7 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 2E2BA5F922644C7000287CA7 /* LICENSE */; };
+		2E2BA60122644C7000287CA7 /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = 2E2BA5FA22644C7000287CA7 /* fishhook.c */; };
+		2E2BA60222644C7000287CA7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2E2BA5FB22644C7000287CA7 /* README.md */; };
+		2E2BA60322644C7000287CA7 /* CONTRIBUTING.md in Resources */ = {isa = PBXBuildFile; fileRef = 2E2BA5FC22644C7000287CA7 /* CONTRIBUTING.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +70,12 @@
 		2E14FD0D2254A47200388366 /* 第4页@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "第4页@3x.png"; sourceTree = "<group>"; };
 		2E14FD112254A82700388366 /* MTLImageHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTLImageHelper.h; sourceTree = "<group>"; };
 		2E14FD122254A82700388366 /* MTLImageHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTLImageHelper.m; sourceTree = "<group>"; };
+		2E2BA5F822644C7000287CA7 /* CODE_OF_CONDUCT.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CODE_OF_CONDUCT.md; sourceTree = "<group>"; };
+		2E2BA5F922644C7000287CA7 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		2E2BA5FA22644C7000287CA7 /* fishhook.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fishhook.c; sourceTree = "<group>"; };
+		2E2BA5FB22644C7000287CA7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2E2BA5FC22644C7000287CA7 /* CONTRIBUTING.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
+		2E2BA5FD22644C7000287CA7 /* fishhook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fishhook.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +106,7 @@
 		2E14FCC522549F7200388366 = {
 			isa = PBXGroup;
 			children = (
+				2E2BA5F722644C7000287CA7 /* fishhook */,
 				2E14FD062254A44B00388366 /* Resource */,
 				2E14FCD022549F7200388366 /* MeiTu */,
 				2E14FCE922549F7400388366 /* MeiTuTests */,
@@ -176,6 +188,19 @@
 				2E14FD122254A82700388366 /* MTLImageHelper.m */,
 			);
 			path = ImageHelper;
+			sourceTree = "<group>";
+		};
+		2E2BA5F722644C7000287CA7 /* fishhook */ = {
+			isa = PBXGroup;
+			children = (
+				2E2BA5F822644C7000287CA7 /* CODE_OF_CONDUCT.md */,
+				2E2BA5F922644C7000287CA7 /* LICENSE */,
+				2E2BA5FA22644C7000287CA7 /* fishhook.c */,
+				2E2BA5FB22644C7000287CA7 /* README.md */,
+				2E2BA5FC22644C7000287CA7 /* CONTRIBUTING.md */,
+				2E2BA5FD22644C7000287CA7 /* fishhook.h */,
+			);
+			path = fishhook;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,11 +313,15 @@
 			files = (
 				2E14FCDE22549F7400388366 /* LaunchScreen.storyboard in Resources */,
 				2E14FD0A2254A46800388366 /* 第2页@3x.png in Resources */,
+				2E2BA60222644C7000287CA7 /* README.md in Resources */,
 				2E14FD0C2254A46D00388366 /* 第3页@3x.png in Resources */,
 				2E14FD0E2254A47200388366 /* 第4页@3x.png in Resources */,
+				2E2BA60322644C7000287CA7 /* CONTRIBUTING.md in Resources */,
 				2E14FCDB22549F7400388366 /* Assets.xcassets in Resources */,
 				2E14FD082254A46200388366 /* 第1页@3x.png in Resources */,
+				2E2BA60022644C7000287CA7 /* LICENSE in Resources */,
 				2E14FCD922549F7200388366 /* Main.storyboard in Resources */,
+				2E2BA5FF22644C7000287CA7 /* CODE_OF_CONDUCT.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +350,7 @@
 				2E14FD052254A13F00388366 /* WelcomeViewController.m in Sources */,
 				2E14FCE122549F7400388366 /* main.m in Sources */,
 				2E14FD132254A82700388366 /* MTLImageHelper.m in Sources */,
+				2E2BA60122644C7000287CA7 /* fishhook.c in Sources */,
 				2E14FCD322549F7200388366 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

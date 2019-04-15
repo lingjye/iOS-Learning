@@ -94,8 +94,8 @@
 
 -(void)startButton:(UIButton *)button{
 //    [self doAnimation];
-//    ViewController *viewController = [[ViewController alloc] init];
-//    [UIApplication sharedApplication].keyWindow.rootViewController = viewController;
+    ViewController *viewController = [[ViewController alloc] init];
+    [UIApplication sharedApplication].keyWindow.rootViewController = viewController;
     NSString *key = @"CFBundleShortVersionString";
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     // 获得当前软件的版本号
@@ -103,8 +103,8 @@
     [defaults setObject:currentVersion forKey:key];
     [defaults synchronize];
     
-//    [self resetRootViewController:viewController];
-    [MTLImageHelper animationRotateAndScaleEffects:self.view];
+    [self resetRootViewController:viewController];
+//    [MTLImageHelper animationRotateAndScaleEffects:self.view];
 }
 
 - (void)doAnimation {
