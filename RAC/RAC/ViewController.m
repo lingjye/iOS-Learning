@@ -7,7 +7,17 @@
 //
 
 #import "ViewController.h"
-#import <ReactiveCocoa/ReactiveCocoa.h>
+#import "RACSkipTableViewController.h"
+#import "RACMapTableViewController.h"
+#import "RACCombineTableViewController.h"
+#import "RACBindTableViewController.h"
+#import "RACSignalTableViewController.h"
+#import "RACSubjectTableViewController.h"
+#import "RACSequenceTableViewController.h"
+#import "RACCommandTableViewController.h"
+#import "RACMacroTableViewController.h"
+#import "RACMulticastConnectionViewController.h"
+#import "MVVMTableViewController.h"
 
 static NSString *RACTestNotification = @"RACTestNotification";
 
@@ -128,30 +138,93 @@ static NSString *RACTestNotification = @"RACTestNotification";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
+    NSString *title = self.datas[indexPath.row];
+    UIViewController *viewController = nil;
     if (indexPath.row == 0) {
-        [self skip];
-    } else if (<#expression#>)
-    
+        viewController = [self filter];
+    } else if (indexPath.row == 1) {
+        viewController = [self map];
+    } else if (indexPath.row == 2) {
+        viewController = [self combine];
+    } else if (indexPath.row == 3) {
+        viewController = [self bind];
+    } else if (indexPath.row == 4) {
+        viewController = [self macro];
+    } else if (indexPath.row == 5) {
+        viewController = [self racSignal];
+    } else if (indexPath.row == 6) {
+        viewController = [self racSubject];
+    } else if (indexPath.row == 7) {
+        viewController = [self racSequence];
+    } else if (indexPath.row == 8) {
+        viewController = [self racCommand];
+    } else if (indexPath.row == 9) {
+        viewController = [self multicastConnection];
+    } else if (indexPath.row == 10) {
+        viewController = [self mvvm];
+    }
+    viewController.title = title;
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
-- (void)skip {
-    
+- (UIViewController *)filter {
+    return [[RACSkipTableViewController alloc] init];
+}
+
+- (UIViewController *)map {
+    return [[RACMapTableViewController alloc] init];
+}
+
+- (UIViewController *)combine {
+    return [[RACCombineTableViewController alloc] init];
+}
+
+- (UIViewController *)bind {
+    return [[RACBindTableViewController alloc] init];
+}
+
+- (UIViewController *)macro {
+    return [[RACMacroTableViewController alloc] init];
+}
+
+- (UIViewController *)racSignal {
+    return [[RACSignalTableViewController alloc] init];
+}
+
+- (UIViewController *)racSubject {
+    return [[RACSubjectTableViewController alloc] init];
+}
+
+- (UIViewController *)racSequence {
+    return [[RACSequenceTableViewController alloc] init];
+}
+
+- (UIViewController *)racCommand {
+    return [[RACCommandTableViewController alloc] init];
+}
+
+- (UIViewController *)multicastConnection {
+    return [[RACMulticastConnectionViewController alloc] init];
+}
+
+- (UIViewController *)mvvm {
+    return [[MVVMTableViewController alloc] init];
 }
 
 - (NSMutableArray *)datas {
     if (!_datas) {
         _datas = [@[
-            @[@"过滤", @"skip"],
-            @[@"映射", @"map"],
-            @[@"组合", @"combine"],
+            @"过滤",
+            @"映射",
+            @"组合",
             @"bind",
             @"常用宏",
             @"RACSignal",
             @"RACSubject",
+            @"RACSequence",
             @"RACComand",
+            @"RACMuticastConnection",
             @"MVVM",
-            @"MVVM+网络请求",
         ] mutableCopy];
     }
     return _datas;
