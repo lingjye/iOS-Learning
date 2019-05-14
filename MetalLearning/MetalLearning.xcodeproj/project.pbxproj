@@ -16,7 +16,11 @@
 		2E0EDA82224DE475006D4E07 /* MetalLearningTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0EDA81224DE475006D4E07 /* MetalLearningTests.m */; };
 		2E0EDA8D224DE475006D4E07 /* MetalLearningUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0EDA8C224DE475006D4E07 /* MetalLearningUITests.m */; };
 		2E0EDA9C224DE6DB006D4E07 /* MTLVertices.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0EDA9B224DE6DB006D4E07 /* MTLVertices.m */; };
-		2E0EDA9F224DE700006D4E07 /* MTLShaders.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0EDA9E224DE700006D4E07 /* MTLShaders.m */; };
+		2E8648CA228A485F000E2EFF /* MTLShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 2E8648C9228A485F000E2EFF /* MTLShaders.metal */; };
+		2E8648CD228A4A6B000E2EFF /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8648CC228A4A6B000E2EFF /* Metal.framework */; };
+		2E8648CF228A4A74000E2EFF /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8648CE228A4A74000E2EFF /* MetalKit.framework */; };
+		2E8648D1228A4A7F000E2EFF /* MetalPerformanceShaders.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8648D0228A4A7F000E2EFF /* MetalPerformanceShaders.framework */; };
+		2E8648D3228A4AAB000E2EFF /* ModelIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8648D2228A4AAB000E2EFF /* ModelIO.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +59,11 @@
 		2E0EDA8E224DE475006D4E07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E0EDA9A224DE6DB006D4E07 /* MTLVertices.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTLVertices.h; sourceTree = "<group>"; };
 		2E0EDA9B224DE6DB006D4E07 /* MTLVertices.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTLVertices.m; sourceTree = "<group>"; };
-		2E0EDA9D224DE700006D4E07 /* MTLShaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTLShaders.h; sourceTree = "<group>"; };
-		2E0EDA9E224DE700006D4E07 /* MTLShaders.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTLShaders.m; sourceTree = "<group>"; };
+		2E8648C9228A485F000E2EFF /* MTLShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = MTLShaders.metal; sourceTree = "<group>"; };
+		2E8648CC228A4A6B000E2EFF /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		2E8648CE228A4A74000E2EFF /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		2E8648D0228A4A7F000E2EFF /* MetalPerformanceShaders.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalPerformanceShaders.framework; path = System/Library/Frameworks/MetalPerformanceShaders.framework; sourceTree = SDKROOT; };
+		2E8648D2228A4AAB000E2EFF /* ModelIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ModelIO.framework; path = System/Library/Frameworks/ModelIO.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +71,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E8648D3228A4AAB000E2EFF /* ModelIO.framework in Frameworks */,
+				2E8648D1228A4A7F000E2EFF /* MetalPerformanceShaders.framework in Frameworks */,
+				2E8648CF228A4A74000E2EFF /* MetalKit.framework in Frameworks */,
+				2E8648CD228A4A6B000E2EFF /* Metal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +102,7 @@
 				2E0EDA80224DE475006D4E07 /* MetalLearningTests */,
 				2E0EDA8B224DE475006D4E07 /* MetalLearningUITests */,
 				2E0EDA66224DE473006D4E07 /* Products */,
+				2E8648CB228A4A6A000E2EFF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,8 +125,7 @@
 				2E0EDA6C224DE473006D4E07 /* ViewController.m */,
 				2E0EDA9A224DE6DB006D4E07 /* MTLVertices.h */,
 				2E0EDA9B224DE6DB006D4E07 /* MTLVertices.m */,
-				2E0EDA9D224DE700006D4E07 /* MTLShaders.h */,
-				2E0EDA9E224DE700006D4E07 /* MTLShaders.m */,
+				2E8648C9228A485F000E2EFF /* MTLShaders.metal */,
 				2E0EDA6E224DE473006D4E07 /* Main.storyboard */,
 				2E0EDA71224DE475006D4E07 /* Assets.xcassets */,
 				2E0EDA73224DE475006D4E07 /* LaunchScreen.storyboard */,
@@ -140,6 +151,17 @@
 				2E0EDA8E224DE475006D4E07 /* Info.plist */,
 			);
 			path = MetalLearningUITests;
+			sourceTree = "<group>";
+		};
+		2E8648CB228A4A6A000E2EFF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E8648D2228A4AAB000E2EFF /* ModelIO.framework */,
+				2E8648D0228A4A7F000E2EFF /* MetalPerformanceShaders.framework */,
+				2E8648CE228A4A74000E2EFF /* MetalKit.framework */,
+				2E8648CC228A4A6B000E2EFF /* Metal.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,8 +294,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E0EDA9F224DE700006D4E07 /* MTLShaders.m in Sources */,
 				2E0EDA6D224DE473006D4E07 /* ViewController.m in Sources */,
+				2E8648CA228A485F000E2EFF /* MTLShaders.metal in Sources */,
 				2E0EDA78224DE475006D4E07 /* main.m in Sources */,
 				2E0EDA9C224DE6DB006D4E07 /* MTLVertices.m in Sources */,
 				2E0EDA6A224DE473006D4E07 /* AppDelegate.m in Sources */,
@@ -448,12 +470,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W8L4MJA5P6;
 				INFOPLIST_FILE = MetalLearning/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = txooo.MetalLearning;
+				PRODUCT_BUNDLE_IDENTIFIER = com.txooo.testapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -464,12 +488,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W8L4MJA5P6;
 				INFOPLIST_FILE = MetalLearning/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = txooo.MetalLearning;
+				PRODUCT_BUNDLE_IDENTIFIER = com.txooo.testapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

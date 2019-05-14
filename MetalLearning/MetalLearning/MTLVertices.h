@@ -8,15 +8,5 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
-@interface MTLVertices : NSObject
-{
-    @public
-    float vertexData[120];
-    float vertexColorData[120];
-}
-
-@end
-
-NS_ASSUME_NONNULL_END
+extern float vertexData[120];
+extern float vertexColorData[120];
