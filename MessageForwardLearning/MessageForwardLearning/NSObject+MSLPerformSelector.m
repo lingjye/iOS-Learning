@@ -14,12 +14,18 @@
 - (id)performSelector:(SEL)selector withObjects:(NSArray *)objects {
     // 方法签名(方法的描述)
     NSMethodSignature *signature = [[self class] instanceMethodSignatureForSelector:selector];
-    if (signature == nil) {
+    if (!signature) {
         [NSException raise:NSLocalizedString(@"错误", nil) format:NSLocalizedString(@"%@方法找不到", nil), NSStringFromSelector(selector)];
+        [self doesNotRecognizeSelector:selector];
+        return nil;
     }
     
     // NSInvocation : 利用一个NSInvocation对象包装一次方法调用（方法调用者、方法名、方法参数、方法返回值）
     NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
+    if (!invocation) {
+        [self doesNotRecognizeSelector:selector];
+        return nil;
+    }
     invocation.target = self;
     invocation.selector = selector;
     
@@ -125,32 +131,25 @@
             UIOffset returnValue;
             [invocation getReturnValue:&returnValue];
             return [NSValue valueWithUIOffset:returnValue];
-        } else if ([returnTypeString isEqualToString:@":"]) {
-            SEL returnValue;
-            [invocation getReturnValue:&returnValue];
-            return NSStringFromSelector(returnValue);
         } else {
-            if ([returnTypeString isEqualToString:@"{NSDirectionalEdgeInsets=dddd}"]) {
-                if (@available(iOS 11.0, *)) {
+            if (@available(iOS 11.0, *) ) {
+                if ([returnTypeString isEqualToString:@"{NSDirectionalEdgeInsets=dddd}"]) {
                     NSDirectionalEdgeInsets returnValue;
                     [invocation getReturnValue:&returnValue];
                     return [NSValue valueWithDirectionalEdgeInsets:returnValue];
-                } else {
-                    // Fallback on earlier versions
                 }
-            } else if ([returnTypeString isEqualToString:@"?"]) {
-                //? unknown type
-                @try {
-                    id returnValue;
-                    [invocation getReturnValue:&returnValue];
-                    return returnValue;
-                } @catch (NSException *exception) {
-                    NSLog(@"%@", exception.description);
-                } @finally {
-                    return nil;
-                }
+                // @":" SEL
+                // @"?" 未知
+                // 其他
             }
         }
+        const char *objCType = [signature methodReturnType];
+        char *buf = calloc(1, signature.methodReturnLength);
+        if (!buf) return nil;
+        [invocation getReturnValue:buf];
+        NSValue *value = [NSValue valueWithBytes:buf objCType:objCType];
+        free(buf);
+        return value;
     }
     return nil;
 }

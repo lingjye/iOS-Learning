@@ -13,7 +13,6 @@
 #import <ModelIO/ModelIO.h>
 
 #define MaxBuffers 3
-#define ConstantBufferSize 2048 * 1024
 
 @interface ViewController () <MTKViewDelegate>
 
@@ -94,41 +93,44 @@
     dispatch_semaphore_wait(_inflightSemaphore, DISPATCH_TIME_FOREVER);
     id<MTLCommandBuffer> commandBuffer = [_commandQueue commandBuffer];
     commandBuffer.label = @"frame command buffer";
-    
-    // use completion handler to signal the semaphore when this frame is completed allowing the encoding of the next frame to proceed
-    // use capture list to avoid any retain cycles if the command buffer gets retained anywhere besides this stack frame
+
+    // use completion handler to signal the semaphore when this frame is completed allowing the
+    // encoding of the next frame to proceed
+    // use capture list to avoid any retain cycles if the command buffer gets retained anywhere
+    // besides this stack frame
     __weak typeof(self) weakSelf = self;
     [commandBuffer addCompletedHandler:^(id<MTLCommandBuffer> _Nonnull buffer) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
         dispatch_semaphore_signal(strongSelf.inflightSemaphore);
     }];
-    
+
     MTLRenderPassDescriptor *renderPassDescriptor = view.currentRenderPassDescriptor;
     id<MTLDrawable> currentDrawable = view.currentDrawable;
     if (renderPassDescriptor && currentDrawable) {
-        id<MTLRenderCommandEncoder> renderEncoder = [commandBuffer renderCommandEncoderWithDescriptor:renderPassDescriptor];
+        id<MTLRenderCommandEncoder> renderEncoder =
+            [commandBuffer renderCommandEncoderWithDescriptor:renderPassDescriptor];
         renderEncoder.label = @"render encoder";
-        
+
         [renderEncoder pushDebugGroup:@"draw star"];
         [renderEncoder setRenderPipelineState:_pipelineState];
-        
+
         [renderEncoder setVertexBuffer:_vertexBuffer offset:0 atIndex:0];
         [renderEncoder setVertexBuffer:_vertexColorBuffer offset:0 atIndex:1];
         [renderEncoder drawPrimitives:MTLPrimitiveTypeTriangle vertexStart:0 vertexCount:120];
-        
+
         [renderEncoder popDebugGroup];
         [renderEncoder endEncoding];
         [commandBuffer presentDrawable:currentDrawable];
     }
-    
-    // bufferIndex matches the current semaphore controled frame index to ensure writing occurs at the correct region in the vertex buffer
+
+    // bufferIndex matches the current semaphore controled frame index to ensure writing occurs at
+    // the correct region in the vertex buffer
     _bufferIndex = (_bufferIndex + 1) % MaxBuffers;
-    
+
     [commandBuffer commit];
 }
 
 - (void)mtkView:(nonnull MTKView *)view drawableSizeWillChange:(CGSize)size {
-    
 }
 
 @end

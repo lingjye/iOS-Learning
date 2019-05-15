@@ -25,6 +25,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    // 逗号表达式
+    int a, b, c;
+    a = 1;
+    b =2;
+    c = 12 + ((void)(a=3), b + a);
+    printf("a=%d, b=%d, c=%d, \n", a, b, c);
+    // goto语句
+    for (int i = 0; i < 10; i++) {
+        for (int j = 0; j < 10; j++) {
+            if (i + j == 10) {
+                goto filed;
+            }
+        }
+    }
+    
+filed:
+    printf("123\n");
+    
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -51,8 +69,6 @@
         case 3: {
             id result = [self performSelector:@selector(printParam0:param1:param2:) withObjects:@[@"1", @2, @"3"]];
             NSLog(@"%@", result);
-            SEL sel = NSSelectorFromString(result);
-            [self performSelector:sel withObject:@"hello"];
         }
             break;
         case 4: {
@@ -82,13 +98,9 @@
     }
 }
 
-- (SEL)printParam0:(NSString *)param0 param1:(NSString *)param1 param2:(NSString *)param2 {
+- (id)printParam0:(NSString *)param0 param1:(NSString *)param1 param2:(NSString *)param2 {
     NSLog(@"%@ --- %@ --- %@", param0, param1, param2);
-    return @selector(nihao:);
-}
-
-- (void)nihao:(NSString *)param {
-    NSLog(@"%s -- %@", __func__, param);
+    return @"你好";
 }
 
 @end
