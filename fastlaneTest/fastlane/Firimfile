@@ -1,0 +1,3 @@
+firim_api_token "Your API Token"
+icon ENV['APPICON_PATH']
+platform "ios"
