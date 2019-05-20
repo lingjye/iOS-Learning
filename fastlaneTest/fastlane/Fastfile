@@ -1,0 +1,80 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+
+  desc "发布fastlaneTest到Fir.im"
+  lane :fastlaneTest_hoc do
+    # add actions here: https://docs.fastlane.tools/actions
+	sh "fastlane adhoc --env fastlaneTest"
+  end
+
+  desc "发布fastlaneTest2到Fir.im"
+  lane :fastlaneTest2_hoc do
+	sh "fastlane adhoc --env fastlaneTest2"
+  end
+  
+  desc "发布fastlaneTest到App Store"
+  lane :fastlaneTest_release do
+	sh "fastlane release --env fastlaneTest"
+  end
+
+  desc "发布fastlaneTest2到App Store"
+  lane :fastlaneTest2_release do
+	sh "fastlane release --env fastlaneTest2"
+  end
+
+  desc "发布指定Target到Fir"
+  lane :adhoc do
+	# get_certificates
+	# get_provisioning_profile
+	# enable_automatic_code_signing(path: "fastlaneTest.xcodeproj")
+  # 更新版本号
+  #increment_version_number_in_plist(target: ENV['SCHEME_NAME'], version_number: ENV['APP_VERSION_RELEASE'])
+  gym(
+	clean:true, #打包前clean项目
+    workspace: "fastlaneTest.xcworkspace",
+	export_method: "ad-hoc", #导出方式
+	scheme: ENV['SCHEME_NAME'], #scheme
+    output_name: ENV['SCHEME_NAME']+".ipa", # ipa 文件名
+	output_directory: "./ipa", #ipa的存放目录
+	export_options: {
+		provisioningProfiles: {
+			"com.txooo.fastlaneTest"=>"fastlaneTest_Hoc", 
+			"com.txooo.fastlaneTest2"=>"fastlaneTest2_Hoc",
+		}
+	}
+  )
+  firim(firim_api_token:'3ef825e07a363e40586af560a1934fa3')
+  end
+
+  desc "发布指定Target到AppStore"
+  lane :release do
+  # 更新版本号
+  #increment_version_number_in_plist(target: ENV['SCHEME_NAME'], version_number: ENV['APP_VERSION_RELEASE'])
+  gym(
+	clean:true, #打包前clean项目
+	workspace: "fastlaneTest.xcworkspace",
+	export_method: "app-store", #导出方式
+	scheme: ENV['SCHEME_NAME'], #scheme
+	output_name: ENV['SCHEME_NAME']+".ipa", # ipa 文件名
+	output_directory: "./ipa", #ipa的存放目录
+  )
+  deliver
+  end
+
+end
