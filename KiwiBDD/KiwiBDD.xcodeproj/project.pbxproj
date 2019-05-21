@@ -1,0 +1,722 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2E90904622938DE0001F6622 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E90904522938DE0001F6622 /* AppDelegate.m */; };
+		2E90904922938DE0001F6622 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E90904822938DE0001F6622 /* ViewController.m */; };
+		2E90904C22938DE0001F6622 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E90904A22938DE0001F6622 /* Main.storyboard */; };
+		2E90904E22938DE2001F6622 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E90904D22938DE2001F6622 /* Assets.xcassets */; };
+		2E90905122938DE2001F6622 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E90904F22938DE2001F6622 /* LaunchScreen.storyboard */; };
+		2E90905422938DE2001F6622 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E90905322938DE2001F6622 /* main.m */; };
+		2E90905E22938DE2001F6622 /* KiwiBDDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E90905D22938DE2001F6622 /* KiwiBDDTests.m */; };
+		2E90906922938DE2001F6622 /* KiwiBDDUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E90906822938DE2001F6622 /* KiwiBDDUITests.m */; };
+		2E90907822938FCF001F6622 /* ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E90907722938FCF001F6622 /* ViewModel.m */; };
+		2E90908B22939E8C001F6622 /* ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E90907722938FCF001F6622 /* ViewModel.m */; };
+		879CC59FFD4DC26FC748F277 /* libPods-KiwiBDD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F195182387BF5FB91C53EB6E /* libPods-KiwiBDD.a */; };
+		99465B14B4D4CD39CBE348A3 /* libPods-KiwiBDDTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 011270F769202E74B16C4AA4 /* libPods-KiwiBDDTests.a */; };
+		E3F5A7A79233F209E4C9EC49 /* libPods-KiwiBDDUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C7DB8A6A5002285A4DA33B /* libPods-KiwiBDDUITests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2E90905A22938DE2001F6622 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E90903922938DE0001F6622 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E90904022938DE0001F6622;
+			remoteInfo = KiwiBDD;
+		};
+		2E90906522938DE2001F6622 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E90903922938DE0001F6622 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E90904022938DE0001F6622;
+			remoteInfo = KiwiBDD;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2E90908522939BC7001F6622 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		011270F769202E74B16C4AA4 /* libPods-KiwiBDDTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KiwiBDDTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CA02A3F7FAB5BE57157ED1A /* Pods-KiwiBDDUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiwiBDDUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KiwiBDDUITests/Pods-KiwiBDDUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2E90904122938DE0001F6622 /* KiwiBDD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KiwiBDD.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E90904422938DE0001F6622 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2E90904522938DE0001F6622 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2E90904722938DE0001F6622 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2E90904822938DE0001F6622 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2E90904B22938DE0001F6622 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2E90904D22938DE2001F6622 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2E90905022938DE2001F6622 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2E90905222938DE2001F6622 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E90905322938DE2001F6622 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2E90905922938DE2001F6622 /* KiwiBDDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KiwiBDDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E90905D22938DE2001F6622 /* KiwiBDDTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KiwiBDDTests.m; sourceTree = "<group>"; };
+		2E90905F22938DE2001F6622 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E90906422938DE2001F6622 /* KiwiBDDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KiwiBDDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E90906822938DE2001F6622 /* KiwiBDDUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KiwiBDDUITests.m; sourceTree = "<group>"; };
+		2E90906A22938DE2001F6622 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E90907622938FCF001F6622 /* ViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewModel.h; sourceTree = "<group>"; };
+		2E90907722938FCF001F6622 /* ViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewModel.m; sourceTree = "<group>"; };
+		2E909079229394C9001F6622 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		417D7FDA1C42BE646EF8AB71 /* Pods-KiwiBDDTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiwiBDDTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KiwiBDDTests/Pods-KiwiBDDTests.debug.xcconfig"; sourceTree = "<group>"; };
+		94C7DB8A6A5002285A4DA33B /* libPods-KiwiBDDUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KiwiBDDUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4EFAE6F469AF779089DEA38 /* Pods-KiwiBDDUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiwiBDDUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KiwiBDDUITests/Pods-KiwiBDDUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C012B4BD180C2AA88906860E /* Pods-KiwiBDD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiwiBDD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KiwiBDD/Pods-KiwiBDD.debug.xcconfig"; sourceTree = "<group>"; };
+		C739DFCC086BC186218755E7 /* Pods-KiwiBDD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiwiBDD.release.xcconfig"; path = "Pods/Target Support Files/Pods-KiwiBDD/Pods-KiwiBDD.release.xcconfig"; sourceTree = "<group>"; };
+		ECF80E5DD0A7920DC6673281 /* Pods-KiwiBDDTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiwiBDDTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KiwiBDDTests/Pods-KiwiBDDTests.release.xcconfig"; sourceTree = "<group>"; };
+		F195182387BF5FB91C53EB6E /* libPods-KiwiBDD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KiwiBDD.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2E90903E22938DE0001F6622 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				879CC59FFD4DC26FC748F277 /* libPods-KiwiBDD.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E90905622938DE2001F6622 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99465B14B4D4CD39CBE348A3 /* libPods-KiwiBDDTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E90906122938DE2001F6622 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3F5A7A79233F209E4C9EC49 /* libPods-KiwiBDDUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1510A87333DBD594819A1CA9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C012B4BD180C2AA88906860E /* Pods-KiwiBDD.debug.xcconfig */,
+				C739DFCC086BC186218755E7 /* Pods-KiwiBDD.release.xcconfig */,
+				417D7FDA1C42BE646EF8AB71 /* Pods-KiwiBDDTests.debug.xcconfig */,
+				ECF80E5DD0A7920DC6673281 /* Pods-KiwiBDDTests.release.xcconfig */,
+				1CA02A3F7FAB5BE57157ED1A /* Pods-KiwiBDDUITests.debug.xcconfig */,
+				B4EFAE6F469AF779089DEA38 /* Pods-KiwiBDDUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2E90903822938DE0001F6622 = {
+			isa = PBXGroup;
+			children = (
+				2E90904322938DE0001F6622 /* KiwiBDD */,
+				2E90905C22938DE2001F6622 /* KiwiBDDTests */,
+				2E90906722938DE2001F6622 /* KiwiBDDUITests */,
+				2E90904222938DE0001F6622 /* Products */,
+				1510A87333DBD594819A1CA9 /* Pods */,
+				F7260218AE97C6D140AD49D0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2E90904222938DE0001F6622 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2E90904122938DE0001F6622 /* KiwiBDD.app */,
+				2E90905922938DE2001F6622 /* KiwiBDDTests.xctest */,
+				2E90906422938DE2001F6622 /* KiwiBDDUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E90904322938DE0001F6622 /* KiwiBDD */ = {
+			isa = PBXGroup;
+			children = (
+				2E90904422938DE0001F6622 /* AppDelegate.h */,
+				2E90904522938DE0001F6622 /* AppDelegate.m */,
+				2E90904722938DE0001F6622 /* ViewController.h */,
+				2E90904822938DE0001F6622 /* ViewController.m */,
+				2E90907622938FCF001F6622 /* ViewModel.h */,
+				2E90907722938FCF001F6622 /* ViewModel.m */,
+				2E90904A22938DE0001F6622 /* Main.storyboard */,
+				2E90904D22938DE2001F6622 /* Assets.xcassets */,
+				2E90904F22938DE2001F6622 /* LaunchScreen.storyboard */,
+				2E90905222938DE2001F6622 /* Info.plist */,
+				2E90905322938DE2001F6622 /* main.m */,
+			);
+			path = KiwiBDD;
+			sourceTree = "<group>";
+		};
+		2E90905C22938DE2001F6622 /* KiwiBDDTests */ = {
+			isa = PBXGroup;
+			children = (
+				2E90905D22938DE2001F6622 /* KiwiBDDTests.m */,
+				2E90905F22938DE2001F6622 /* Info.plist */,
+			);
+			path = KiwiBDDTests;
+			sourceTree = "<group>";
+		};
+		2E90906722938DE2001F6622 /* KiwiBDDUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2E90906822938DE2001F6622 /* KiwiBDDUITests.m */,
+				2E90906A22938DE2001F6622 /* Info.plist */,
+			);
+			path = KiwiBDDUITests;
+			sourceTree = "<group>";
+		};
+		F7260218AE97C6D140AD49D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E909079229394C9001F6622 /* XCTest.framework */,
+				F195182387BF5FB91C53EB6E /* libPods-KiwiBDD.a */,
+				011270F769202E74B16C4AA4 /* libPods-KiwiBDDTests.a */,
+				94C7DB8A6A5002285A4DA33B /* libPods-KiwiBDDUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2E90904022938DE0001F6622 /* KiwiBDD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E90906D22938DE2001F6622 /* Build configuration list for PBXNativeTarget "KiwiBDD" */;
+			buildPhases = (
+				343A2E622520407C15C997B1 /* [CP] Check Pods Manifest.lock */,
+				2E90903D22938DE0001F6622 /* Sources */,
+				2E90903E22938DE0001F6622 /* Frameworks */,
+				2E90903F22938DE0001F6622 /* Resources */,
+				2E90908522939BC7001F6622 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KiwiBDD;
+			productName = KiwiBDD;
+			productReference = 2E90904122938DE0001F6622 /* KiwiBDD.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2E90905822938DE2001F6622 /* KiwiBDDTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E90907022938DE2001F6622 /* Build configuration list for PBXNativeTarget "KiwiBDDTests" */;
+			buildPhases = (
+				268211CE068A4E64474F56BA /* [CP] Check Pods Manifest.lock */,
+				2E90905522938DE2001F6622 /* Sources */,
+				2E90905622938DE2001F6622 /* Frameworks */,
+				2E90905722938DE2001F6622 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2E90905B22938DE2001F6622 /* PBXTargetDependency */,
+			);
+			name = KiwiBDDTests;
+			productName = KiwiBDDTests;
+			productReference = 2E90905922938DE2001F6622 /* KiwiBDDTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2E90906322938DE2001F6622 /* KiwiBDDUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E90907322938DE2001F6622 /* Build configuration list for PBXNativeTarget "KiwiBDDUITests" */;
+			buildPhases = (
+				1E680A88D29DEAE48D42C4FB /* [CP] Check Pods Manifest.lock */,
+				2E90906022938DE2001F6622 /* Sources */,
+				2E90906122938DE2001F6622 /* Frameworks */,
+				2E90906222938DE2001F6622 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2E90906622938DE2001F6622 /* PBXTargetDependency */,
+			);
+			name = KiwiBDDUITests;
+			productName = KiwiBDDUITests;
+			productReference = 2E90906422938DE2001F6622 /* KiwiBDDUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2E90903922938DE0001F6622 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = txooo;
+				TargetAttributes = {
+					2E90904022938DE0001F6622 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					2E90905822938DE2001F6622 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 2E90904022938DE0001F6622;
+					};
+					2E90906322938DE2001F6622 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 2E90904022938DE0001F6622;
+					};
+				};
+			};
+			buildConfigurationList = 2E90903C22938DE0001F6622 /* Build configuration list for PBXProject "KiwiBDD" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2E90903822938DE0001F6622;
+			productRefGroup = 2E90904222938DE0001F6622 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2E90904022938DE0001F6622 /* KiwiBDD */,
+				2E90905822938DE2001F6622 /* KiwiBDDTests */,
+				2E90906322938DE2001F6622 /* KiwiBDDUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2E90903F22938DE0001F6622 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E90905122938DE2001F6622 /* LaunchScreen.storyboard in Resources */,
+				2E90904E22938DE2001F6622 /* Assets.xcassets in Resources */,
+				2E90904C22938DE0001F6622 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E90905722938DE2001F6622 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E90906222938DE2001F6622 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E680A88D29DEAE48D42C4FB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KiwiBDDUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		268211CE068A4E64474F56BA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KiwiBDDTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		343A2E622520407C15C997B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KiwiBDD-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2E90903D22938DE0001F6622 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E90904922938DE0001F6622 /* ViewController.m in Sources */,
+				2E90905422938DE2001F6622 /* main.m in Sources */,
+				2E90907822938FCF001F6622 /* ViewModel.m in Sources */,
+				2E90904622938DE0001F6622 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E90905522938DE2001F6622 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E90905E22938DE2001F6622 /* KiwiBDDTests.m in Sources */,
+				2E90908B22939E8C001F6622 /* ViewModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E90906022938DE2001F6622 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E90906922938DE2001F6622 /* KiwiBDDUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2E90905B22938DE2001F6622 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E90904022938DE0001F6622 /* KiwiBDD */;
+			targetProxy = 2E90905A22938DE2001F6622 /* PBXContainerItemProxy */;
+		};
+		2E90906622938DE2001F6622 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E90904022938DE0001F6622 /* KiwiBDD */;
+			targetProxy = 2E90906522938DE2001F6622 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2E90904A22938DE0001F6622 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E90904B22938DE0001F6622 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2E90904F22938DE2001F6622 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E90905022938DE2001F6622 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2E90906B22938DE2001F6622 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2E90906C22938DE2001F6622 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2E90906E22938DE2001F6622 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C012B4BD180C2AA88906860E /* Pods-KiwiBDD.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KiwiBDD/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = txooo.KiwiBDD;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2E90906F22938DE2001F6622 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C739DFCC086BC186218755E7 /* Pods-KiwiBDD.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KiwiBDD/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = txooo.KiwiBDD;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2E90907122938DE2001F6622 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 417D7FDA1C42BE646EF8AB71 /* Pods-KiwiBDDTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KiwiBDDTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = txooo.KiwiBDDTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KiwiBDD.app/KiwiBDD";
+			};
+			name = Debug;
+		};
+		2E90907222938DE2001F6622 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECF80E5DD0A7920DC6673281 /* Pods-KiwiBDDTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KiwiBDDTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = txooo.KiwiBDDTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KiwiBDD.app/KiwiBDD";
+			};
+			name = Release;
+		};
+		2E90907422938DE2001F6622 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CA02A3F7FAB5BE57157ED1A /* Pods-KiwiBDDUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KiwiBDDUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = txooo.KiwiBDDUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KiwiBDD;
+			};
+			name = Debug;
+		};
+		2E90907522938DE2001F6622 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4EFAE6F469AF779089DEA38 /* Pods-KiwiBDDUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KiwiBDDUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = txooo.KiwiBDDUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KiwiBDD;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2E90903C22938DE0001F6622 /* Build configuration list for PBXProject "KiwiBDD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E90906B22938DE2001F6622 /* Debug */,
+				2E90906C22938DE2001F6622 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E90906D22938DE2001F6622 /* Build configuration list for PBXNativeTarget "KiwiBDD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E90906E22938DE2001F6622 /* Debug */,
+				2E90906F22938DE2001F6622 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E90907022938DE2001F6622 /* Build configuration list for PBXNativeTarget "KiwiBDDTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E90907122938DE2001F6622 /* Debug */,
+				2E90907222938DE2001F6622 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E90907322938DE2001F6622 /* Build configuration list for PBXNativeTarget "KiwiBDDUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E90907422938DE2001F6622 /* Debug */,
+				2E90907522938DE2001F6622 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2E90903922938DE0001F6622 /* Project object */;
+}
