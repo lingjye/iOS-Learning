@@ -32,36 +32,32 @@ target 'MainProject' do
         inherit! :search_paths
         # Pods for testing
     end
-    
-    target 'PublicModule' do
-        project 'PublicModule/PublicModule.xcodeproj'
-        pods_public
-        
-        target 'PublicModuleTests' do
-            inherit! :search_paths
-        end
-    end
-    
-    target 'ModuleA' do
-        project 'ModuleA/ModuleA.xcodeproj'
-        pods_main
-        
-        target 'ModuleATests' do
-            inherit! :search_paths
-        end
-    end
-    
-    target 'ModuleB' do
-        project 'ModuleB/ModuleB.xcodeproj'
-        pods_main
-        
-        target 'ModuleBTests' do
-            inherit! :search_paths
-        end
-    end
-    
-    
-
 end
 
 
+target 'PublicModule' do
+    project 'PublicModule/PublicModule.xcodeproj'
+    pods_public
+    
+    target 'PublicModuleTests' do
+        inherit! :search_paths
+    end
+end
+
+target 'ModuleA' do
+    project 'ModuleA/ModuleA.xcodeproj'
+    pods_main
+    
+    target 'ModuleATests' do
+        inherit! :search_paths
+    end
+end
+
+target 'ModuleB' do
+    project 'ModuleB/ModuleB.xcodeproj'
+    pods_main
+    
+    target 'ModuleBTests' do
+        inherit! :search_paths
+    end
+end
