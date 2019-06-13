@@ -1,0 +1,17 @@
+//
+//  PrefixHeaderB.pch
+//  ModuleB
+//
+//  Created by txooo on 2019/6/13.
+//  Copyright © 2019 txooo. All rights reserved.
+//
+
+#ifndef PrefixHeaderB_pch
+#define PrefixHeaderB_pch
+
+#import "LibraryHelperB.h"
+#import <PublicModule/PublicModule.h>
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeaderB_pch */
