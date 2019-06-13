@@ -2,26 +2,66 @@
 platform :ios, '9.0'
 inhibit_all_warnings!
 
-def pods_func
-    # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
-    # use_frameworks!
-    pod 'MKBaseClassesSDK', :git => 'http://gitlab.txooo.cc/HuangYibo/MKBaseClassesSDK'
+workspace 'MainProject.xcworkspace'
+project 'MainProject/MainProject.xcodeproj'
+
+def pods_main
+#    pod 'MKBaseClassesSDK', :git => 'http://gitlab.txooo.cc/HuangYibo/MKBaseClassesSDK'
     pod 'CTMediator'
+    pod 'Masonry'
+    pod 'AFNetworking'
+end
+
+def pods_public
+    pod 'AFNetworking'
 end
 
 target 'MainProject' do
-  
-  # Pods for MainProject
-  pods_func
+    # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+    # use_frameworks!
+    project 'MainProject/MainProject.xcodeproj'
+    # Pods for test
+    pods_main
 
-  target 'MainProjectTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+    target 'MainProjectTests' do
+        inherit! :search_paths
+        # Pods for testing
+    end
 
-  target 'MainProjectUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+    target 'MainProjectUITests' do
+        inherit! :search_paths
+        # Pods for testing
+    end
+    
+    target 'PublicModule' do
+        project 'PublicModule/PublicModule.xcodeproj'
+        pods_public
+        
+        target 'PublicModuleTests' do
+            inherit! :search_paths
+        end
+    end
+    
+    target 'ModuleA' do
+        project 'ModuleA/ModuleA.xcodeproj'
+        pods_main
+        
+        target 'ModuleATests' do
+            inherit! :search_paths
+        end
+    end
+    
+    target 'ModuleB' do
+        project 'ModuleB/ModuleB.xcodeproj'
+        pods_main
+        
+        target 'ModuleBTests' do
+            inherit! :search_paths
+        end
+    end
+    
+    
 
 end
+
+

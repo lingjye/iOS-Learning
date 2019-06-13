@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)play;
 - (void)playAnimal;
 - (void)request;
+- (void)sleep;
 
 @end
 

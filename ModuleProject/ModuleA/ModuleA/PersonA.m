@@ -8,7 +8,6 @@
 
 #import "PersonA.h"
 #import "AnimalA.h"
-#import <PublicModule/PublicModule.h>
 
 @interface PersonA ()
 {
@@ -41,9 +40,13 @@
 }
 
 - (void)request {
-    [NetRequest request:^(id  _Nonnull result) {
-        NSLog(@"A %@", result);
+    [NetRequest request:^(id result) {
+        NSLog(@"A %@ ", result);
     }];
+}
+
+- (void)sleep {
+    NSLog(@"A sleep");
 }
 
 @end

@@ -40,9 +40,17 @@
 }
 
 - (void)request {
-    [NetRequest request:^(id  _Nonnull result) {
-        NSLog(@"B %@", result);
+    [NetRequest request:^(id result) {
+        NSLog(@"B %@ ", result);
     }];
+}
+
+- (void)run {
+    NSLog(@"B run");
+}
+
+- (void)sleep {
+    NSLog(@"B sleep");
 }
 
 @end
