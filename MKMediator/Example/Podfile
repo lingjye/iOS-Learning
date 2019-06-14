@@ -1,0 +1,15 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'MKMediator_Example' do
+  pod 'MKMediator', :path => '../'
+  pod 'ModuleA', :path => '../ModuleA/'
+  pod 'ModuleB', :path => '../ModuleB/'
+  
+  target 'MKMediator_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

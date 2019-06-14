@@ -1,0 +1,26 @@
+PODS:
+  - MKMediator (0.0.1)
+  - ModuleA (0.1.0)
+  - ModuleB (0.1.0)
+
+DEPENDENCIES:
+  - MKMediator (from `../`)
+  - ModuleA (from `../ModuleA/`)
+  - ModuleB (from `../ModuleB/`)
+
+EXTERNAL SOURCES:
+  MKMediator:
+    :path: "../"
+  ModuleA:
+    :path: "../ModuleA/"
+  ModuleB:
+    :path: "../ModuleB/"
+
+SPEC CHECKSUMS:
+  MKMediator: 67dfbf6e7c984355153bc3eeade9966e0fb160f9
+  ModuleA: 152efd17da0a16fa0dff18c76165605152ec4985
+  ModuleB: c359058fa688efcfd38442f5376e088b8b820207
+
+PODFILE CHECKSUM: 74c8cd696a235fbac70a31747f77e9eb86ee1fb1
+
+COCOAPODS: 1.5.3
