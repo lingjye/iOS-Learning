@@ -7,8 +7,8 @@
 //
 
 /*
- 基于 MKMediator 实现扩展
- 原项目地址: https://github.com/casatwy/MKMediator
+ 基于 CTMediator 实现扩展
+ 原项目地址: https://github.com/casatwy/CTMediator
  */
 
 #import <UIKit/UIKit.h>
