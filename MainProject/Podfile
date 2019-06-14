@@ -1,0 +1,64 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '9.0'
+inhibit_all_warnings!
+
+workspace 'MainProject.xcworkspace'
+project 'MainProject/MainProject.xcodeproj'
+
+def pods_main
+    pod 'CTMediator'
+    pods_public
+end
+
+def pods_moduleC
+    pod 'AFNetworking'
+end
+
+def pods_public
+    pod 'Masonry'
+end
+
+target 'MainProject' do
+    # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+    # use_frameworks!
+    project 'MainProject/MainProject.xcodeproj'
+    # Pods for test
+    pods_main
+
+    target 'MainProjectTests' do
+        inherit! :search_paths
+        # Pods for testing
+    end
+
+    target 'MainProjectUITests' do
+        inherit! :search_paths
+        # Pods for testing
+    end
+end
+
+target 'ModuleA' do
+    project 'ModuleA/ModuleA.xcodeproj'
+    pods_public
+    
+    target 'ModuleATests' do
+        inherit! :search_paths
+    end
+end
+
+target 'ModuleB' do
+    project 'ModuleB/ModuleB.xcodeproj'
+    pods_public
+    
+    target 'ModuleBTests' do
+        inherit! :search_paths
+    end
+end
+
+target 'ModuleC' do
+    project 'ModuleC/ModuleC.xcodeproj'
+    pods_moduleC
+    
+    target 'ModuleCTests' do
+        inherit! :search_paths
+    end
+end
