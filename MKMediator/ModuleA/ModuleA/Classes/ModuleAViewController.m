@@ -7,9 +7,10 @@
 //
 
 #import "ModuleAViewController.h"
+#import <MKMediator/MKMediator.h>
 
 @interface ModuleAViewController ()
-
+@property (nonatomic, strong) MKMediator *mediator;
 @end
 
 @implementation ModuleAViewController
@@ -19,16 +20,61 @@
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"ModuleA";
     self.view.backgroundColor = UIColor.greenColor;
+
+    UIButton *button = ({
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [btn setTitle:@"Click goto ModuleB" forState:UIControlStateNormal];
+        [btn setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
+        [btn setBackgroundColor:UIColor.redColor];
+        [btn addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
+        btn.translatesAutoresizingMaskIntoConstraints = NO;
+        btn;
+    });
+    [self.view addSubview:button];
+    [self.view addConstraints:@[
+        [NSLayoutConstraint constraintWithItem:button
+                                     attribute:NSLayoutAttributeCenterX
+                                     relatedBy:NSLayoutRelationEqual
+                                        toItem:self.view
+                                     attribute:NSLayoutAttributeCenterX
+                                    multiplier:1
+                                      constant:0],
+        [NSLayoutConstraint constraintWithItem:button
+                                     attribute:NSLayoutAttributeTop
+                                     relatedBy:NSLayoutRelationEqual
+                                        toItem:self.view
+                                     attribute:NSLayoutAttributeTop
+                                    multiplier:1
+                                      constant:100],
+        [NSLayoutConstraint constraintWithItem:button
+                                     attribute:NSLayoutAttributeWidth
+                                     relatedBy:NSLayoutRelationEqual
+                                        toItem:nil
+                                     attribute:NSLayoutAttributeNotAnAttribute
+                                    multiplier:1
+                                      constant:250],
+        [NSLayoutConstraint constraintWithItem:button
+                                     attribute:NSLayoutAttributeHeight
+                                     relatedBy:NSLayoutRelationEqual
+                                        toItem:nil
+                                     attribute:NSLayoutAttributeNotAnAttribute
+                                    multiplier:1
+                                      constant:50]
+    ]];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)click {
+    UIViewController *viewController = self.mediator.dispatch(
+        MKMediatorAction.sClsMethod(@"ModuleB viewController")
+            .params(MKMediatorParameters.create.key(@"title").value(@"ModlueA->ModuleB").dictionary));
+    [self.navigationController pushViewController:viewController animated:YES];
 }
-*/
+
+- (MKMediator *)mediator {
+    if (!_mediator) {
+        _mediator = [[MKMediator alloc] init];
+    }
+    return _mediator;
+}
 
 @end

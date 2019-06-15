@@ -17,6 +17,12 @@ MKMediator is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
+pod 'MKMediator', :git => 'ssh://192.168.1.3:22/tfs/IOSCollection/_git/MKMediator.git'
+```
+OR
+
+```
+source 'ssh://192.168.1.3:22/tfs/IOSCollection/_git/MKMediator.git'
 pod 'MKMediator'
 ```
 
