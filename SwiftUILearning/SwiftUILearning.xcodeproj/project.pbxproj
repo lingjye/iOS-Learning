@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F13541322BEA07C00A3C730 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F13541222BEA07C00A3C730 /* SwiftUIView.swift */; };
 		2E0BFC3922A8EEBB0007F037 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0BFC3822A8EEBB0007F037 /* AppDelegate.swift */; };
 		2E0BFC3B22A8EEBB0007F037 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0BFC3A22A8EEBB0007F037 /* ViewController.swift */; };
 		2E0BFC3E22A8EEBB0007F037 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E0BFC3C22A8EEBB0007F037 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F13541222BEA07C00A3C730 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		2E0BFC3522A8EEBB0007F037 /* SwiftUILearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUILearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E0BFC3822A8EEBB0007F037 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E0BFC3A22A8EEBB0007F037 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				2E0BFC3822A8EEBB0007F037 /* AppDelegate.swift */,
 				2E0BFC3A22A8EEBB0007F037 /* ViewController.swift */,
 				2E0BFC6622A8EEDA0007F037 /* ContentView.swift */,
+				1F13541222BEA07C00A3C730 /* SwiftUIView.swift */,
 				2E0BFC3C22A8EEBB0007F037 /* Main.storyboard */,
 				2E0BFC3F22A8EEBE0007F037 /* Assets.xcassets */,
 				2E0BFC4122A8EEBE0007F037 /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 			files = (
 				2E0BFC3B22A8EEBB0007F037 /* ViewController.swift in Sources */,
 				2E0BFC3922A8EEBB0007F037 /* AppDelegate.swift in Sources */,
+				1F13541322BEA07C00A3C730 /* SwiftUIView.swift in Sources */,
 				2E0BFC6722A8EEDA0007F037 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
