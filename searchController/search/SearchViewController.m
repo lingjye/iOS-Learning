@@ -9,6 +9,7 @@
 #import "SearchViewController.h"
 #import "SearchResultViewController.h"
 #import "MJRefresh.h"
+#import "NormalTableViewController.h"
 
 @interface SearchViewController ()<UISearchControllerDelegate, UISearchResultsUpdating, UITableViewDelegate, UITableViewDataSource>
 
@@ -51,16 +52,16 @@ static NSString *const CellID = @"cellID";
     [self.view addSubview:self.tableView];
     
     //适配iOS 11,在 `iOS 11`环境中UISearchBar不是添加到UISearchControllerView中 而是被添加到了 导航栏中了
-//    if (@available(iOS 11, *)) {
-//        self.navigationItem.searchController = self.searchController;
-//        self.navigationItem.hidesSearchBarWhenScrolling = NO;
-//    } else {
+    if (@available(iOS 11, *)) {
+        self.navigationItem.searchController = self.searchController;
+        self.navigationItem.hidesSearchBarWhenScrolling = NO;
+    } else {
         self.tableView.tableHeaderView = self.searchController.searchBar;
-//    }
-    
+    }
+
     [self customSearchBarStyle];
     [self refresh];
-    
+//    self.searchController.active = YES;
 }
 
 - (void)refresh {
@@ -101,6 +102,12 @@ static NSString *const CellID = @"cellID";
     return 60;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    NormalTableViewController *viewController = [[NormalTableViewController alloc] init];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
 #pragma UISearchControllerDelegate
 - (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
     NSLog(@"%@", searchController.searchBar.text);
@@ -112,6 +119,7 @@ static NSString *const CellID = @"cellID";
         }
     }
     self.resultViewController.dataArray = array;
+    searchController.searchResultsController.view.hidden = NO;
 }
 
 - (void)willPresentSearchController:(UISearchController *)searchController {
@@ -153,7 +161,6 @@ static NSString *const CellID = @"cellID";
         [[UIBarButtonItem appearanceWhenContainedInInstancesOfClasses:@[[UISearchBar class]]] setTitle:@"取消"];
     } else {
         // Fallback on earlier versions
-//        [UIBarButtonItem appearanceForTraitCollection:[UITraitCollection ]];
     }
     //    [self.searchCtrl.searchBar setValue:@"取消" forKey:@"_cancelButtonText"];
     
@@ -173,6 +180,7 @@ static NSString *const CellID = @"cellID";
     
     //修改文字样式（在iOS 11 环境中拿不到该属性）
     UITextField *textField = [self.searchController.searchBar valueForKey:@"_searchField"];
+
     textField.textColor = [UIColor yellowColor];
     textField.font = [UIFont systemFontOfSize:15.f];
     
@@ -187,12 +195,13 @@ static NSString *const CellID = @"cellID";
     }
 
     //取消上下两条线
-    for (UIView *view in self.searchController.searchBar.subviews.firstObject.subviews) {
-        if ([view isKindOfClass:NSClassFromString(@"UISearchBarBackground")]) {
-            [view setBackgroundColor:UIColor.blueColor];
-        }
-    }
-
+//    for (UIView *view in self.searchController.searchBar.subviews.firstObject.subviews) {
+//        if ([view isKindOfClass:NSClassFromString(@"UISearchBarBackground")]) {
+//            [view setBackgroundColor:UIColor.blueColor];
+//        }
+//    }
+//    textField.backgroundColor = UIColor.blueColor;
+    // 在iOS11 导航栏上时生效
     if (@available(iOS 11, *)) {
         for (UIImageView *view in textField.subviews) {
             if ([view isKindOfClass:NSClassFromString(@"_UISearchBarSearchFieldBackgroundView")]) {
@@ -201,6 +210,8 @@ static NSString *const CellID = @"cellID";
             }
 
         }
+    } else {
+        
     }
 }
 

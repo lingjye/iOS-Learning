@@ -19,6 +19,15 @@ static NSString *const normalCellID = @"cellID";
     [super viewDidLoad];
     self.navigationItem.title = @"普通列表";
     [self.view addSubview:self.tableView];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"pop" style:UIBarButtonItemStylePlain target:self action:@selector(popAction)];
+}
+
+- (void)popAction {
+    if (self.navigationController.viewControllers.count >= 3) {
+        [self.navigationController popToViewController:self.navigationController.viewControllers[self.navigationController.viewControllers.count - 3] animated:YES];
+    } else {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 #pragma mark - Table view data source

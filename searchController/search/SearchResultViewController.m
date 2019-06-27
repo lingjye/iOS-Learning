@@ -29,7 +29,7 @@ static NSString *const cellID = @"cellID";
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
-    self.tableView.tableFooterView = [[UIView alloc] init];
+//    self.tableView.tableFooterView = [[UIView alloc] init];
     self.tableView.rowHeight = 60;
     self.tableView.sectionHeaderHeight = 0.0f;
     self.tableView.sectionFooterHeight = 0.0f;
