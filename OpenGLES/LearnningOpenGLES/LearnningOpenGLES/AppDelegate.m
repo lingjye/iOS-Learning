@@ -1,9 +1,9 @@
 //
 //  AppDelegate.m
-//  OpenGL
+//  LearnningOpenGLES
 //
-//  Created by txooo on 2019/2/25.
-//  Copyright © 2019 txooo. All rights reserved.
+//  Created by 领琾 on 2019/6/27.
+//  Copyright © 2019 领琾. All rights reserved.
 //
 
 #import "AppDelegate.h"
