@@ -1,0 +1,707 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2E9221112148F24600EFB72B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9221102148F24600EFB72B /* AppDelegate.m */; };
+		2E9221142148F24600EFB72B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9221132148F24600EFB72B /* ViewController.m */; };
+		2E9221172148F24600EFB72B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E9221152148F24600EFB72B /* Main.storyboard */; };
+		2E9221192148F24600EFB72B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E9221182148F24600EFB72B /* Assets.xcassets */; };
+		2E92211C2148F24600EFB72B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E92211A2148F24600EFB72B /* LaunchScreen.storyboard */; };
+		2E92211F2148F24600EFB72B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E92211E2148F24600EFB72B /* main.m */; };
+		2E9221292148F24600EFB72B /* AwesomeiOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9221282148F24600EFB72B /* AwesomeiOSTests.m */; };
+		2E9221342148F24600EFB72B /* AwesomeiOSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9221332148F24600EFB72B /* AwesomeiOSUITests.m */; };
+		2E9221462148F68A00EFB72B /* AWSNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9221452148F68A00EFB72B /* AWSNavigationViewController.m */; };
+		2E9221492148F79400EFB72B /* AWSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9221482148F79400EFB72B /* AWSViewController.m */; };
+		2E92214C2148F7C500EFB72B /* AWSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E92214B2148F7C500EFB72B /* AWSTableViewController.m */; };
+		2E9221502148FBB700EFB72B /* AWSHeartRateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E92214F2148FBB700EFB72B /* AWSHeartRateViewController.m */; };
+		2E9221532148FBDA00EFB72B /* AWSHeartRateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9221522148FBDA00EFB72B /* AWSHeartRateView.m */; };
+		2E9221552148FC0800EFB72B /* data.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E9221542148FC0700EFB72B /* data.txt */; };
+		2E9221562148FC3600EFB72B /* AWSHeartRateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E92214F2148FBB700EFB72B /* AWSHeartRateViewController.m */; };
+		2E92215A2149140F00EFB72B /* AWSSiriWaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9221592149140F00EFB72B /* AWSSiriWaveViewController.m */; };
+		2EAECAB3214F34B4005515C0 /* AWSWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EAECAB2214F34B4005515C0 /* AWSWaveView.m */; };
+		2EAECAB6214F8E79005515C0 /* MediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EAECAB5214F8E79005515C0 /* MediaViewController.m */; };
+		2EAECAB9214F8F08005515C0 /* NonUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EAECAB8214F8F08005515C0 /* NonUIViewController.m */; };
+		2EB5C47421609F7E00159C2D /* AWSPaintBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB5C47321609F7E00159C2D /* AWSPaintBezierPath.m */; };
+		2EB5C4772160A0AC00159C2D /* AWSPaintSelectColorEasyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB5C4762160A0AC00159C2D /* AWSPaintSelectColorEasyView.m */; };
+		2EB5C47A2160A12700159C2D /* AWSPaintSelectColorPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB5C4792160A12700159C2D /* AWSPaintSelectColorPickerView.m */; };
+		2EB5C47E2160B4E500159C2D /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB5C47D2160B4E500159C2D /* UIColor+Hex.m */; };
+		2ECF20592150CB4B008D0065 /* AWSKlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECF20582150CB4B008D0065 /* AWSKlineViewController.m */; };
+		2ECF205E2150EC81008D0065 /* AWSPaintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECF205D2150EC81008D0065 /* AWSPaintViewController.m */; };
+		2ECF20612150ED5E008D0065 /* AWSPaintView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECF20602150ED5E008D0065 /* AWSPaintView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2E9221252148F24600EFB72B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E9221042148F24500EFB72B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E92210B2148F24500EFB72B;
+			remoteInfo = AwesomeiOS;
+		};
+		2E9221302148F24600EFB72B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E9221042148F24500EFB72B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E92210B2148F24500EFB72B;
+			remoteInfo = AwesomeiOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2E92210C2148F24500EFB72B /* AwesomeiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AwesomeiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E92210F2148F24600EFB72B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2E9221102148F24600EFB72B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2E9221122148F24600EFB72B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2E9221132148F24600EFB72B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2E9221162148F24600EFB72B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2E9221182148F24600EFB72B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2E92211B2148F24600EFB72B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2E92211D2148F24600EFB72B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E92211E2148F24600EFB72B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2E9221242148F24600EFB72B /* AwesomeiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AwesomeiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E9221282148F24600EFB72B /* AwesomeiOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AwesomeiOSTests.m; sourceTree = "<group>"; };
+		2E92212A2148F24600EFB72B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E92212F2148F24600EFB72B /* AwesomeiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AwesomeiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E9221332148F24600EFB72B /* AwesomeiOSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AwesomeiOSUITests.m; sourceTree = "<group>"; };
+		2E9221352148F24600EFB72B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E9221442148F68A00EFB72B /* AWSNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AWSNavigationViewController.h; sourceTree = "<group>"; };
+		2E9221452148F68A00EFB72B /* AWSNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AWSNavigationViewController.m; sourceTree = "<group>"; };
+		2E9221472148F79400EFB72B /* AWSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AWSViewController.h; sourceTree = "<group>"; };
+		2E9221482148F79400EFB72B /* AWSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AWSViewController.m; sourceTree = "<group>"; };
+		2E92214A2148F7C500EFB72B /* AWSTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AWSTableViewController.h; sourceTree = "<group>"; };
+		2E92214B2148F7C500EFB72B /* AWSTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AWSTableViewController.m; sourceTree = "<group>"; };
+		2E92214D2148F9D800EFB72B /* AWSTableViewControllerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AWSTableViewControllerProtocol.h; sourceTree = "<group>"; };
+		2E92214E2148FBB700EFB72B /* AWSHeartRateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AWSHeartRateViewController.h; sourceTree = "<group>"; };
+		2E92214F2148FBB700EFB72B /* AWSHeartRateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AWSHeartRateViewController.m; sourceTree = "<group>"; };
+		2E9221512148FBDA00EFB72B /* AWSHeartRateView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AWSHeartRateView.h; sourceTree = "<group>"; };
+		2E9221522148FBDA00EFB72B /* AWSHeartRateView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AWSHeartRateView.m; sourceTree = "<group>"; };
+		2E9221542148FC0700EFB72B /* data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data.txt; sourceTree = "<group>"; };
+		2E9221582149140F00EFB72B /* AWSSiriWaveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AWSSiriWaveViewController.h; sourceTree = "<group>"; };
+		2E9221592149140F00EFB72B /* AWSSiriWaveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AWSSiriWaveViewController.m; sourceTree = "<group>"; };
+		2EAECAB1214F34B4005515C0 /* AWSWaveView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AWSWaveView.h; sourceTree = "<group>"; };
+		2EAECAB2214F34B4005515C0 /* AWSWaveView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AWSWaveView.m; sourceTree = "<group>"; };
+		2EAECAB4214F8E79005515C0 /* MediaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MediaViewController.h; sourceTree = "<group>"; };
+		2EAECAB5214F8E79005515C0 /* MediaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MediaViewController.m; sourceTree = "<group>"; };
+		2EAECAB7214F8F08005515C0 /* NonUIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NonUIViewController.h; sourceTree = "<group>"; };
+		2EAECAB8214F8F08005515C0 /* NonUIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NonUIViewController.m; sourceTree = "<group>"; };
+		2EB5C47221609F7E00159C2D /* AWSPaintBezierPath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AWSPaintBezierPath.h; sourceTree = "<group>"; };
+		2EB5C47321609F7E00159C2D /* AWSPaintBezierPath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AWSPaintBezierPath.m; sourceTree = "<group>"; };
+		2EB5C4752160A0AC00159C2D /* AWSPaintSelectColorEasyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AWSPaintSelectColorEasyView.h; sourceTree = "<group>"; };
+		2EB5C4762160A0AC00159C2D /* AWSPaintSelectColorEasyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AWSPaintSelectColorEasyView.m; sourceTree = "<group>"; };
+		2EB5C4782160A12700159C2D /* AWSPaintSelectColorPickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AWSPaintSelectColorPickerView.h; sourceTree = "<group>"; };
+		2EB5C4792160A12700159C2D /* AWSPaintSelectColorPickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AWSPaintSelectColorPickerView.m; sourceTree = "<group>"; };
+		2EB5C47C2160B4E500159C2D /* UIColor+Hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		2EB5C47D2160B4E500159C2D /* UIColor+Hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		2ECF20572150CB4B008D0065 /* AWSKlineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AWSKlineViewController.h; sourceTree = "<group>"; };
+		2ECF20582150CB4B008D0065 /* AWSKlineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AWSKlineViewController.m; sourceTree = "<group>"; };
+		2ECF205C2150EC81008D0065 /* AWSPaintViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AWSPaintViewController.h; sourceTree = "<group>"; };
+		2ECF205D2150EC81008D0065 /* AWSPaintViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AWSPaintViewController.m; sourceTree = "<group>"; };
+		2ECF205F2150ED5E008D0065 /* AWSPaintView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AWSPaintView.h; sourceTree = "<group>"; };
+		2ECF20602150ED5E008D0065 /* AWSPaintView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AWSPaintView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2E9221092148F24500EFB72B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E9221212148F24600EFB72B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E92212C2148F24600EFB72B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2E9221032148F24500EFB72B = {
+			isa = PBXGroup;
+			children = (
+				2E92210E2148F24500EFB72B /* AwesomeiOS */,
+				2E9221272148F24600EFB72B /* AwesomeiOSTests */,
+				2E9221322148F24600EFB72B /* AwesomeiOSUITests */,
+				2E92210D2148F24500EFB72B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2E92210D2148F24500EFB72B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2E92210C2148F24500EFB72B /* AwesomeiOS.app */,
+				2E9221242148F24600EFB72B /* AwesomeiOSTests.xctest */,
+				2E92212F2148F24600EFB72B /* AwesomeiOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E92210E2148F24500EFB72B /* AwesomeiOS */ = {
+			isa = PBXGroup;
+			children = (
+				2E9221432148F62F00EFB72B /* Base */,
+				2E9221412148F5C700EFB72B /* Classes */,
+				2E92210F2148F24600EFB72B /* AppDelegate.h */,
+				2E9221102148F24600EFB72B /* AppDelegate.m */,
+				2E9221122148F24600EFB72B /* ViewController.h */,
+				2E9221132148F24600EFB72B /* ViewController.m */,
+				2EAECAB4214F8E79005515C0 /* MediaViewController.h */,
+				2EAECAB5214F8E79005515C0 /* MediaViewController.m */,
+				2EAECAB7214F8F08005515C0 /* NonUIViewController.h */,
+				2EAECAB8214F8F08005515C0 /* NonUIViewController.m */,
+				2E9221152148F24600EFB72B /* Main.storyboard */,
+				2E9221182148F24600EFB72B /* Assets.xcassets */,
+				2E92211A2148F24600EFB72B /* LaunchScreen.storyboard */,
+				2E92211D2148F24600EFB72B /* Info.plist */,
+				2E92211E2148F24600EFB72B /* main.m */,
+			);
+			path = AwesomeiOS;
+			sourceTree = "<group>";
+		};
+		2E9221272148F24600EFB72B /* AwesomeiOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				2E9221282148F24600EFB72B /* AwesomeiOSTests.m */,
+				2E92212A2148F24600EFB72B /* Info.plist */,
+			);
+			path = AwesomeiOSTests;
+			sourceTree = "<group>";
+		};
+		2E9221322148F24600EFB72B /* AwesomeiOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2E9221332148F24600EFB72B /* AwesomeiOSUITests.m */,
+				2E9221352148F24600EFB72B /* Info.plist */,
+			);
+			path = AwesomeiOSUITests;
+			sourceTree = "<group>";
+		};
+		2E9221412148F5C700EFB72B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2ECF205B2150EC5E008D0065 /* Paint */,
+				2ECF20562150C854008D0065 /* Kline */,
+				2E922157214913E300EFB72B /* Siri */,
+				2E9221422148F5D500EFB72B /* HeartRateCurve */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		2E9221422148F5D500EFB72B /* HeartRateCurve */ = {
+			isa = PBXGroup;
+			children = (
+				2E9221542148FC0700EFB72B /* data.txt */,
+				2E92214E2148FBB700EFB72B /* AWSHeartRateViewController.h */,
+				2E92214F2148FBB700EFB72B /* AWSHeartRateViewController.m */,
+				2E9221512148FBDA00EFB72B /* AWSHeartRateView.h */,
+				2E9221522148FBDA00EFB72B /* AWSHeartRateView.m */,
+			);
+			path = HeartRateCurve;
+			sourceTree = "<group>";
+		};
+		2E9221432148F62F00EFB72B /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				2E9221442148F68A00EFB72B /* AWSNavigationViewController.h */,
+				2E9221452148F68A00EFB72B /* AWSNavigationViewController.m */,
+				2E9221472148F79400EFB72B /* AWSViewController.h */,
+				2E9221482148F79400EFB72B /* AWSViewController.m */,
+				2E92214A2148F7C500EFB72B /* AWSTableViewController.h */,
+				2E92214B2148F7C500EFB72B /* AWSTableViewController.m */,
+				2E92214D2148F9D800EFB72B /* AWSTableViewControllerProtocol.h */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		2E922157214913E300EFB72B /* Siri */ = {
+			isa = PBXGroup;
+			children = (
+				2E9221582149140F00EFB72B /* AWSSiriWaveViewController.h */,
+				2E9221592149140F00EFB72B /* AWSSiriWaveViewController.m */,
+				2EAECAB1214F34B4005515C0 /* AWSWaveView.h */,
+				2EAECAB2214F34B4005515C0 /* AWSWaveView.m */,
+			);
+			path = Siri;
+			sourceTree = "<group>";
+		};
+		2ECF20562150C854008D0065 /* Kline */ = {
+			isa = PBXGroup;
+			children = (
+				2ECF20572150CB4B008D0065 /* AWSKlineViewController.h */,
+				2ECF20582150CB4B008D0065 /* AWSKlineViewController.m */,
+			);
+			path = Kline;
+			sourceTree = "<group>";
+		};
+		2ECF205B2150EC5E008D0065 /* Paint */ = {
+			isa = PBXGroup;
+			children = (
+				2ECF205C2150EC81008D0065 /* AWSPaintViewController.h */,
+				2ECF205D2150EC81008D0065 /* AWSPaintViewController.m */,
+				2ECF205F2150ED5E008D0065 /* AWSPaintView.h */,
+				2ECF20602150ED5E008D0065 /* AWSPaintView.m */,
+				2EB5C47221609F7E00159C2D /* AWSPaintBezierPath.h */,
+				2EB5C47321609F7E00159C2D /* AWSPaintBezierPath.m */,
+				2EB5C4752160A0AC00159C2D /* AWSPaintSelectColorEasyView.h */,
+				2EB5C4762160A0AC00159C2D /* AWSPaintSelectColorEasyView.m */,
+				2EB5C4782160A12700159C2D /* AWSPaintSelectColorPickerView.h */,
+				2EB5C4792160A12700159C2D /* AWSPaintSelectColorPickerView.m */,
+				2EB5C47C2160B4E500159C2D /* UIColor+Hex.h */,
+				2EB5C47D2160B4E500159C2D /* UIColor+Hex.m */,
+			);
+			path = Paint;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2E92210B2148F24500EFB72B /* AwesomeiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E9221382148F24600EFB72B /* Build configuration list for PBXNativeTarget "AwesomeiOS" */;
+			buildPhases = (
+				2E9221082148F24500EFB72B /* Sources */,
+				2E9221092148F24500EFB72B /* Frameworks */,
+				2E92210A2148F24500EFB72B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AwesomeiOS;
+			productName = AwesomeiOS;
+			productReference = 2E92210C2148F24500EFB72B /* AwesomeiOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2E9221232148F24600EFB72B /* AwesomeiOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E92213B2148F24600EFB72B /* Build configuration list for PBXNativeTarget "AwesomeiOSTests" */;
+			buildPhases = (
+				2E9221202148F24600EFB72B /* Sources */,
+				2E9221212148F24600EFB72B /* Frameworks */,
+				2E9221222148F24600EFB72B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2E9221262148F24600EFB72B /* PBXTargetDependency */,
+			);
+			name = AwesomeiOSTests;
+			productName = AwesomeiOSTests;
+			productReference = 2E9221242148F24600EFB72B /* AwesomeiOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2E92212E2148F24600EFB72B /* AwesomeiOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E92213E2148F24600EFB72B /* Build configuration list for PBXNativeTarget "AwesomeiOSUITests" */;
+			buildPhases = (
+				2E92212B2148F24600EFB72B /* Sources */,
+				2E92212C2148F24600EFB72B /* Frameworks */,
+				2E92212D2148F24600EFB72B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2E9221312148F24600EFB72B /* PBXTargetDependency */,
+			);
+			name = AwesomeiOSUITests;
+			productName = AwesomeiOSUITests;
+			productReference = 2E92212F2148F24600EFB72B /* AwesomeiOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2E9221042148F24500EFB72B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "领琾";
+				TargetAttributes = {
+					2E92210B2148F24500EFB72B = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					2E9221232148F24600EFB72B = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2E92210B2148F24500EFB72B;
+					};
+					2E92212E2148F24600EFB72B = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2E92210B2148F24500EFB72B;
+					};
+				};
+			};
+			buildConfigurationList = 2E9221072148F24500EFB72B /* Build configuration list for PBXProject "AwesomeiOS" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2E9221032148F24500EFB72B;
+			productRefGroup = 2E92210D2148F24500EFB72B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2E92210B2148F24500EFB72B /* AwesomeiOS */,
+				2E9221232148F24600EFB72B /* AwesomeiOSTests */,
+				2E92212E2148F24600EFB72B /* AwesomeiOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2E92210A2148F24500EFB72B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E9221552148FC0800EFB72B /* data.txt in Resources */,
+				2E92211C2148F24600EFB72B /* LaunchScreen.storyboard in Resources */,
+				2E9221192148F24600EFB72B /* Assets.xcassets in Resources */,
+				2E9221172148F24600EFB72B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E9221222148F24600EFB72B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E92212D2148F24600EFB72B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2E9221082148F24500EFB72B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E9221142148F24600EFB72B /* ViewController.m in Sources */,
+				2EB5C47E2160B4E500159C2D /* UIColor+Hex.m in Sources */,
+				2ECF205E2150EC81008D0065 /* AWSPaintViewController.m in Sources */,
+				2EAECAB3214F34B4005515C0 /* AWSWaveView.m in Sources */,
+				2E9221532148FBDA00EFB72B /* AWSHeartRateView.m in Sources */,
+				2EB5C47421609F7E00159C2D /* AWSPaintBezierPath.m in Sources */,
+				2E9221502148FBB700EFB72B /* AWSHeartRateViewController.m in Sources */,
+				2EB5C47A2160A12700159C2D /* AWSPaintSelectColorPickerView.m in Sources */,
+				2E92214C2148F7C500EFB72B /* AWSTableViewController.m in Sources */,
+				2ECF20592150CB4B008D0065 /* AWSKlineViewController.m in Sources */,
+				2E92211F2148F24600EFB72B /* main.m in Sources */,
+				2E92215A2149140F00EFB72B /* AWSSiriWaveViewController.m in Sources */,
+				2EAECAB6214F8E79005515C0 /* MediaViewController.m in Sources */,
+				2E9221492148F79400EFB72B /* AWSViewController.m in Sources */,
+				2EB5C4772160A0AC00159C2D /* AWSPaintSelectColorEasyView.m in Sources */,
+				2ECF20612150ED5E008D0065 /* AWSPaintView.m in Sources */,
+				2E9221462148F68A00EFB72B /* AWSNavigationViewController.m in Sources */,
+				2EAECAB9214F8F08005515C0 /* NonUIViewController.m in Sources */,
+				2E9221112148F24600EFB72B /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E9221202148F24600EFB72B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E9221292148F24600EFB72B /* AwesomeiOSTests.m in Sources */,
+				2E9221562148FC3600EFB72B /* AWSHeartRateViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E92212B2148F24600EFB72B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E9221342148F24600EFB72B /* AwesomeiOSUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2E9221262148F24600EFB72B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E92210B2148F24500EFB72B /* AwesomeiOS */;
+			targetProxy = 2E9221252148F24600EFB72B /* PBXContainerItemProxy */;
+		};
+		2E9221312148F24600EFB72B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E92210B2148F24500EFB72B /* AwesomeiOS */;
+			targetProxy = 2E9221302148F24600EFB72B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2E9221152148F24600EFB72B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E9221162148F24600EFB72B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2E92211A2148F24600EFB72B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E92211B2148F24600EFB72B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2E9221362148F24600EFB72B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2E9221372148F24600EFB72B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2E9221392148F24600EFB72B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5MTCW89VZ6;
+				INFOPLIST_FILE = AwesomeiOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mk100.testapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2E92213A2148F24600EFB72B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5MTCW89VZ6;
+				INFOPLIST_FILE = AwesomeiOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mk100.testapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2E92213C2148F24600EFB72B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AwesomeiOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = txooo.AwesomeiOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AwesomeiOS.app/AwesomeiOS";
+			};
+			name = Debug;
+		};
+		2E92213D2148F24600EFB72B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AwesomeiOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = txooo.AwesomeiOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AwesomeiOS.app/AwesomeiOS";
+			};
+			name = Release;
+		};
+		2E92213F2148F24600EFB72B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AwesomeiOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = txooo.AwesomeiOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AwesomeiOS;
+			};
+			name = Debug;
+		};
+		2E9221402148F24600EFB72B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AwesomeiOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = txooo.AwesomeiOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AwesomeiOS;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2E9221072148F24500EFB72B /* Build configuration list for PBXProject "AwesomeiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E9221362148F24600EFB72B /* Debug */,
+				2E9221372148F24600EFB72B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E9221382148F24600EFB72B /* Build configuration list for PBXNativeTarget "AwesomeiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E9221392148F24600EFB72B /* Debug */,
+				2E92213A2148F24600EFB72B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E92213B2148F24600EFB72B /* Build configuration list for PBXNativeTarget "AwesomeiOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E92213C2148F24600EFB72B /* Debug */,
+				2E92213D2148F24600EFB72B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E92213E2148F24600EFB72B /* Build configuration list for PBXNativeTarget "AwesomeiOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E92213F2148F24600EFB72B /* Debug */,
+				2E9221402148F24600EFB72B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2E9221042148F24500EFB72B /* Project object */;
+}
