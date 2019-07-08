@@ -13,6 +13,7 @@
 
 @interface MTLRootViewController () {
     NSArray *_datas;
+    dispatch_source_t _timer;
 }
 
 @end
@@ -31,10 +32,11 @@
 //    [self dispatchGroup];
 //    [self dispatchBarrierAsync];
 //    [self dispatchApply];
-    [self dispatchSuspendResume];
+//    [self dispatchSuspendResume];
 //    [self dispatchSemaphore];
 //    [self dispatchIO];
-    
+//    [self dispatchSourceAyncRead];
+    [self dispatchSourceTimer];
 }
 
 - (IBAction)itemClick:(UIButton *)sender {
@@ -396,13 +398,82 @@
     });
 }
 
-- (void)dispatchSource {
-//    dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, <#dispatchQueue#>);
-//    dispatch_source_set_timer(timer, DISPATCH_TIME_NOW, <#intervalInSeconds#> * NSEC_PER_SEC, <#leewayInSeconds#> * NSEC_PER_SEC);
-//    dispatch_source_set_event_handler(timer, ^{
-//        <#code to be executed when timer fires#>
-//    });
-//    dispatch_resume(timer);
+- (void)dispatchSourceAyncRead {
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"DispatchIOFile" ofType:@"txt"];
+    __block size_t total = 0;
+    // 要读取的字节数
+    long long fileSize = [[NSFileManager defaultManager] attributesOfItemAtPath:path error:nil].fileSize;
+    size_t size = fileSize;
+    char *buff = (char *)malloc(size);
+    
+    dispatch_fd_t fd = open([path UTF8String], O_RDONLY);
+    // 设定异步映像
+    fcntl(fd, F_SETFL, O_NONBLOCK);
+    
+    // 获取用于追加事件的Global Dispatch Queue
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    
+    // 基于READ事件创建Dispatch Source
+    dispatch_source_t source = dispatch_source_create(DISPATCH_SOURCE_TYPE_READ, fd, 0, queue);
+    // 指定发生READd事件时执行的处理
+    dispatch_block_t event_handler = ^{
+        // 获取可读取的字节数
+        size_t availble = dispatch_source_get_data(source);
+        // 从映像中读取
+        long length = read(fd, buff, availble);
+        // 发生错误时取消Dispatch Source
+        if (length < 0) {
+            // 取消读取
+            dispatch_source_cancel(source);
+        }
+        total += length;
+        if (total == size) {
+            // buff的处理
+            // 处理结束，取消Dispatch Source
+            dispatch_source_cancel(source);
+            NSString *result = [[NSString alloc] initWithBytes:buff length:size encoding:NSUTF8StringEncoding];
+            NSLog(@"%@", result);
+            NSLog(@"读取完成");
+        }
+    };
+    dispatch_source_set_event_handler(source, event_handler);
+    
+    // 指定取消Dispatch Source时的处理
+    dispatch_block_t cancel_handler = ^{
+        // 释放资源
+        free(buff);
+        close(fd);
+        // 释放Dispatch Source 支持ARC，无需手动释放
+//        dispatch_release(source);
+        NSLog(@"取消");
+    };
+    dispatch_source_set_cancel_handler(source, cancel_handler);
+    
+    // 启动 Dispatch Source
+    dispatch_resume(source);
+    
+}
+
+- (void)dispatchSourceTimer {
+    // 指定DISPATCH_SOURCE_TYPE_TIMER,创建Dispatch Source, 指定在Main Dispatch Queue
+    dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_main_queue());
+    // 定时器每隔3s执行一次,允许延迟1s
+    dispatch_source_set_timer(timer, DISPATCH_TIME_NOW, 3 * NSEC_PER_SEC, 1 * NSEC_PER_SEC);
+    // 指定执行处理
+    dispatch_source_set_event_handler(timer, ^{
+        NSLog(@"定时器执行");
+        // 取消Dispatch Source
+//        dispatch_source_cancel(timer);
+    });
+
+    // 指定取消事件
+    dispatch_source_set_cancel_handler(timer, ^{
+        NSLog(@"取消");
+    });
+
+    dispatch_resume(timer);
+    // 必须设置为属性才有用
+    _timer = timer;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
