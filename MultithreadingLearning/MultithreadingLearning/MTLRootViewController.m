@@ -30,7 +30,11 @@
     
 //    [self dispatchGroup];
 //    [self dispatchBarrierAsync];
-    [self dispatchApply];
+//    [self dispatchApply];
+    [self dispatchSuspendResume];
+//    [self dispatchSemaphore];
+//    [self dispatchIO];
+    
 }
 
 - (IBAction)itemClick:(UIButton *)sender {
@@ -248,6 +252,60 @@
     
 }
 
+- (void)dispatchSuspendResume {
+    dispatch_queue_t queue = dispatch_queue_create("com.test.dispatchSuspendResume", DISPATCH_QUEUE_SERIAL);
+    dispatch_async(queue, ^{
+        NSLog(@"等待3s前");
+        sleep(3);
+        // 已开始任务不会被挂起
+        NSLog(@"等待3s后");
+    });
+    dispatch_async(queue, ^{
+        NSLog(@"另一个等待3s前");
+        sleep(3);
+        // 这个打印方法会在上次打印后至少间隔6s后打印
+        // 本次未开始，被挂起
+        NSLog(@"另一个等待3s后");
+    });
+    //延时一秒
+    sleep(1);
+    //挂起队列
+    NSLog(@"开始挂起");
+    dispatch_suspend(queue);
+    //延时5秒
+    NSLog(@"等待5s");
+    sleep(5);
+    //5s后恢复队列
+    NSLog(@"恢复");
+    dispatch_resume(queue);
+}
+
+- (void)dispatchSemaphore {
+    NSMutableArray *mutArray = [NSMutableArray array];
+    // dispatch semaphore 的计数初始值设定为1
+    // 保证可访问 NSMutableArray 类对象的线程同时只能有一个
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(1);
+    
+    for (int i = 0; i < 100; i++) {
+        dispatch_async(queue, ^{
+            // 等待 dispatch semaphore
+            // 直到 dispatch semaphore 的计数值达到大于等于1
+            dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+            
+            // 大于等于1 所以讲dispatch semaphore 的技术值减1
+            //                        dispatch_semaphore_wait 函数执行返回
+            [mutArray addObject:[NSNumber numberWithInt:i]];
+            
+            // 通过 dispatch_semaphore_signal 函数
+            // 将 dispatch semaphore 的计数值增加1
+            dispatch_semaphore_signal(semaphore);
+        });
+    }
+    
+    NSLog(@"%@", mutArray);
+}
+
 //- (instancetype)dispatchOnce {
 //    static dispatch_once_t onceToken;
 //    static MysingleTon *singleTon;
@@ -272,12 +330,79 @@
 //    });
     
     // 分割读取数据通过使用Dispatch Data
-    dispatch_queue_t pipe_q = dispatch_queue_create("PipeQ", NULL);
-    dispatch_fd_t fd = 0;
-    dispatch_io_t pipe_channel = dispatch_io_create(DISPATCH_IO_STREAM, fd, pipe_q, ^(int error) {
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"DispatchIOFile" ofType:@"txt"];
+#if 0
+    // 异步串行读取 Serial Dispatch Queue
+    dispatch_queue_t queue = dispatch_queue_create("PipeQ", NULL);
+    dispatch_fd_t fd = open([path UTF8String], O_RDONLY, 0);
+    dispatch_io_t pipe_channel = dispatch_io_create(DISPATCH_IO_STREAM, fd, queue, ^(int error) {
         close(fd);
     });
-    
+    //设置读取大小
+    size_t water = 1024;
+    dispatch_io_set_low_water(pipe_channel, water);
+    dispatch_io_set_high_water(pipe_channel, water);
+
+    long long fileSize = [[NSFileManager defaultManager] attributesOfItemAtPath:path error:nil].fileSize;
+    NSMutableData *totalData = [[NSMutableData alloc] init];
+
+    dispatch_io_read(pipe_channel, 0, fileSize, queue, ^(bool done, dispatch_data_t _Nullable data, int error) {
+        if (error == 0) {
+            size_t len = dispatch_data_get_size(data);
+            if (len > 0) {
+                [totalData appendData:(NSData *)data];
+            }
+        }
+        if (done) {
+            NSString *str = [[NSString alloc] initWithData:totalData encoding:NSUTF8StringEncoding];
+            NSLog(@"%@", str);
+        }
+    });
+#endif
+    // 异步并行读取文件 Concurrent Dispatch Queue
+    dispatch_queue_t queue = dispatch_queue_create("PipeQ", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_fd_t fd = open([path UTF8String], O_RDONLY);
+    dispatch_io_t pipe_channel = dispatch_io_create(DISPATCH_IO_RANDOM, fd, queue, ^(int error) {
+        close(fd);
+    });
+    off_t currentSize = 0;
+    long long fileSize = [[NSFileManager defaultManager] attributesOfItemAtPath:path error:nil].fileSize;
+    //设置每次读取大小
+    size_t offset = 1024;
+    // 创建Dispatch Group
+    dispatch_group_t group = dispatch_group_create();
+    // 创建长度为文件长度的空可变data，等待数据读取到之后替换
+    NSMutableData *totalData = [[NSMutableData alloc] initWithLength:fileSize];
+    for (; currentSize <= fileSize; currentSize += offset) {
+        dispatch_group_enter(group);
+        dispatch_io_read(pipe_channel, currentSize, offset, queue, ^(bool done, dispatch_data_t _Nullable data, int error) {
+            if (error == 0) {
+                size_t len = dispatch_data_get_size(data);
+                if (len > 0) {
+                    const void *bytes = NULL;
+                    (void)dispatch_data_create_map(data, (const void **)&bytes, &len);
+                    // 替换数据
+                    [totalData replaceBytesInRange:NSMakeRange(currentSize, len) withBytes:bytes length:len];
+                }
+            }
+            if (done) {
+                dispatch_group_leave(group);
+            }
+        });
+    }
+    dispatch_group_notify(group, queue, ^{
+        NSString *str = [[NSString alloc] initWithData:totalData encoding:NSUTF8StringEncoding];
+        NSLog(@"%@", str);
+    });
+}
+
+- (void)dispatchSource {
+//    dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, <#dispatchQueue#>);
+//    dispatch_source_set_timer(timer, DISPATCH_TIME_NOW, <#intervalInSeconds#> * NSEC_PER_SEC, <#leewayInSeconds#> * NSEC_PER_SEC);
+//    dispatch_source_set_event_handler(timer, ^{
+//        <#code to be executed when timer fires#>
+//    });
+//    dispatch_resume(timer);
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -371,7 +496,7 @@
                         [mutArray addObject:[NSNumber numberWithInt:i]];
                         
                         // 通过 dispatch_semaphore_signal 函数
-                        // 将 dispatch semaphore 的技术值增加1
+                        // 将 dispatch semaphore 的计数值增加1
                         dispatch_semaphore_signal(semaphore);
                     });
                 }

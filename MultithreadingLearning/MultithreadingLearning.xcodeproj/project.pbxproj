@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E06B68622D31BC300EF971D /* DispatchIOFile.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E06B68522D31BC300EF971D /* DispatchIOFile.txt */; };
 		2E93AE7522519A18006C69C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E93AE7422519A18006C69C7 /* AppDelegate.m */; };
 		2E93AE7822519A18006C69C7 /* MTLRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E93AE7722519A18006C69C7 /* MTLRootViewController.m */; };
 		2E93AE7B22519A18006C69C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E93AE7922519A18006C69C7 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E06B68522D31BC300EF971D /* DispatchIOFile.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = DispatchIOFile.txt; sourceTree = "<group>"; };
 		2E93AE7022519A18006C69C7 /* MultithreadingLearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultithreadingLearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E93AE7322519A18006C69C7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2E93AE7422519A18006C69C7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			children = (
 				2E93AE7322519A18006C69C7 /* AppDelegate.h */,
 				2E93AE7422519A18006C69C7 /* AppDelegate.m */,
+				2E06B68522D31BC300EF971D /* DispatchIOFile.txt */,
 				2E93AE7622519A18006C69C7 /* MTLRootViewController.h */,
 				2E93AE7722519A18006C69C7 /* MTLRootViewController.m */,
 				2E93AECB2251A31F006C69C7 /* MTLHook.h */,
@@ -255,6 +258,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E06B68622D31BC300EF971D /* DispatchIOFile.txt in Resources */,
 				2E93AE8022519A1A006C69C7 /* LaunchScreen.storyboard in Resources */,
 				2E93AE7D22519A1A006C69C7 /* Assets.xcassets in Resources */,
 				2E93AE7B22519A18006C69C7 /* Main.storyboard in Resources */,
