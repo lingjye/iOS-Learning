@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FE807D822D4DC3900C7375E /* MFLAutoDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FE807D622D4DC3900C7375E /* MFLAutoDictionary.m */; };
 		2E6231AC2249FC41009C7617 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6231AB2249FC41009C7617 /* AppDelegate.m */; };
 		2E6231AF2249FC41009C7617 /* MFLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6231AE2249FC41009C7617 /* MFLViewController.m */; };
 		2E6231B22249FC41009C7617 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E6231B02249FC41009C7617 /* Main.storyboard */; };
@@ -45,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1FE807D622D4DC3900C7375E /* MFLAutoDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFLAutoDictionary.m; sourceTree = "<group>"; };
+		1FE807D722D4DC3900C7375E /* MFLAutoDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFLAutoDictionary.h; sourceTree = "<group>"; };
 		2E6231A72249FC41009C7617 /* MessageForwardLearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageForwardLearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E6231AA2249FC41009C7617 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2E6231AB2249FC41009C7617 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -133,6 +136,8 @@
 				2EEC277A228BF7C60074A57B /* 消息转发.png */,
 				2E6231AA2249FC41009C7617 /* AppDelegate.h */,
 				2E6231AB2249FC41009C7617 /* AppDelegate.m */,
+				1FE807D722D4DC3900C7375E /* MFLAutoDictionary.h */,
+				1FE807D622D4DC3900C7375E /* MFLAutoDictionary.m */,
 				2E6231AD2249FC41009C7617 /* MFLViewController.h */,
 				2E6231AE2249FC41009C7617 /* MFLViewController.m */,
 				2E6231DC2249FFED009C7617 /* MFLAnimal.h */,
@@ -313,6 +318,7 @@
 			files = (
 				2E85E247224B2997008FD3E6 /* NSObject+Animal.m in Sources */,
 				2E6231E12249FFFE009C7617 /* MFLPig.m in Sources */,
+				1FE807D822D4DC3900C7375E /* MFLAutoDictionary.m in Sources */,
 				2E6231AF2249FC41009C7617 /* MFLViewController.m in Sources */,
 				2E6231E7224A0E13009C7617 /* MFLCat.m in Sources */,
 				2E6231EA224A1274009C7617 /* NSObject+MSLPerformSelector.m in Sources */,

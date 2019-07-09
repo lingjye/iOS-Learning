@@ -15,6 +15,7 @@
 #import "NSObject+MSLPerformSelector.h"
 #import "MFLParrot+Animal.h"
 #import "NSObject+Animal.h"
+#import "MFLAutoDictionary.h"
 
 @interface MFLViewController ()
 
@@ -25,6 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.tableView.rowHeight = 50.0f;
     // 逗号表达式
     int a, b, c;
     a = 1;
@@ -40,9 +42,11 @@
         }
     }
     
-filed:
-    printf("123\n");
-    
+    filed: {
+        MFLAutoDictionary *dictionary = [MFLAutoDictionary new];
+        dictionary.date = [NSDate dateWithTimeIntervalSince1970:4753728000];
+        NSLog(@"dictionary.date=%@", dictionary.date);
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
