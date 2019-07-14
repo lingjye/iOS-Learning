@@ -8,6 +8,7 @@
 
 #import "MFLAutoDictionary.h"
 #import <objc/runtime.h>
+#import <objc/message.h>
 
 @interface MFLAutoDictionary ()
 
@@ -22,6 +23,7 @@
 - (instancetype)init {
     if (self) {
         _backingStore = [NSMutableDictionary new];
+        
     }
     return self;
 }
