@@ -12,16 +12,17 @@
 
 @implementation MFLParrot
 
-// 快速转发
-//- (id)forwardingTargetForSelector:(SEL)aSelector {
+// 备用接受者 如果要执行完整消息转发机制处理消息，此处应返回nil
+- (id)forwardingTargetForSelector:(SEL)aSelector {
 //    MFLAnimal *animal = [[MFLAnimal alloc] init];
 //    if ([animal respondsToSelector:aSelector]) {
 //        return animal;
 //    }
-//    return nil;
-//}
+    return nil;
+}
 
-// 标准转发
+// 完整消息转发 如果只是把消息转给备用接收者 建议采用转发机制第二步（forwardingTargetForSelector：）返回备用接受者处理
+// 否则需要创建完整的签名过程，而返回备用接受者则更为简单
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
     NSLog(@"%s --- %@", __func__, NSStringFromSelector(aSelector));
     // 转发当前对象的eat方法到MFLSmallCat实例中去调用

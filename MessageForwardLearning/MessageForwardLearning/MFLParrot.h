@@ -7,11 +7,11 @@
 //
 
 /*
- 实现方法:
+ 多继承实现方法:
  1. 消息转发
  2. Category
- 3. delegate和protocol 本例不做演示
- 4. 组合方式            本例不做演示
+ 3. delegate和protocol
+ 4. 组合方式
  */
 
 #import "MFLBird.h"
