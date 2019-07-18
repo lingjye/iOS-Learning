@@ -1,0 +1,16 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+source 'ssh://192.168.1.3:22/tfs/IOSCollection/_git/MKSpecs'
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'MixSDK_Example' do
+  pod 'MixSDK', :path => '../'
+
+  target 'MixSDK_Tests' do
+    inherit! :search_paths
+
+    pod 'Kiwi'
+  end
+end
