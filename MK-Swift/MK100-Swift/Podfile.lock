@@ -1,0 +1,69 @@
+PODS:
+  - Alamofire (4.8.2)
+  - Charts (3.3.0):
+    - Charts/Core (= 3.3.0)
+  - Charts/Core (3.3.0)
+  - FBRetainCycleDetector (0.1.4)
+  - HandyJSON (5.0.0)
+  - Kingfisher (5.7.0)
+  - MJRefresh (3.2.0)
+  - MLeaksFinder (1.0.0):
+    - FBRetainCycleDetector
+  - Moya (13.0.1):
+    - Moya/Core (= 13.0.1)
+  - Moya/Core (13.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.1)
+  - ReactiveCocoa (10.0.0):
+    - ReactiveSwift (~> 6.0)
+  - ReactiveSwift (6.0.0)
+  - Result (4.1.0)
+  - SnapKit (5.0.0)
+  - SwiftyJSON (5.0.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - Charts
+  - HandyJSON
+  - Kingfisher
+  - MJRefresh
+  - MLeaksFinder
+  - Moya
+  - ReactiveCocoa
+  - SnapKit
+  - SwiftyJSON
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Charts
+    - FBRetainCycleDetector
+    - HandyJSON
+    - Kingfisher
+    - MJRefresh
+    - MLeaksFinder
+    - Moya
+    - ReactiveCocoa
+    - ReactiveSwift
+    - Result
+    - SnapKit
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Charts: e0dd4cd8f257bccf98407b58183ddca8e8d5b578
+  FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
+  HandyJSON: 992f2d661716d6a91de82d0056927bc7813b5770
+  Kingfisher: c7d211b54f1f30d8060aadab177d52b4349c825b
+  MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
+  MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
+  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
+  ReactiveCocoa: 6d4c37ba236f5d9a7a55b2172cd09f19ba85f574
+  ReactiveSwift: 24b7ed245617bbfd30ee0c87779b6c64ac1b4518
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+
+PODFILE CHECKSUM: 45a4f6724b2622ecdb35ba1a94d0781fe131d604
+
+COCOAPODS: 1.7.2

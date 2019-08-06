@@ -1,0 +1,30 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'MK100-Swift' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for MK100-Swift
+  pod 'SnapKit'
+  pod 'Kingfisher'
+  pod 'Charts'
+  pod 'Alamofire'
+  pod 'SwiftyJSON'
+  pod 'ReactiveCocoa'
+  pod 'MLeaksFinder'
+  pod 'MJRefresh'
+  pod 'HandyJSON'
+  pod 'Moya'
+
+  target 'MK100-SwiftTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'MK100-SwiftUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
