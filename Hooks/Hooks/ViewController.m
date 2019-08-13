@@ -236,7 +236,11 @@ void testFFIClosure() {
         [self viewWillAppear:YES];
     } else if (tag == 1) {
         // hook C函数，第一个参数是一个rebinding类型结构体数组，第二个参数是第一个参数结构体数组的长度
-        rebind_symbols((struct rebinding[2]){{"close", my_close, (void *)&orig_close}, {"open", my_open, (void *)&orig_open}}, 2);
+        struct rebinding rebindings[2] = {
+            {"close", my_close, (void *)&orig_close},
+            {"open", my_open, (void *)&orig_open}
+        };
+        rebind_symbols(rebindings, 2);
         // 获取二进制文件进行读取
         NSString *binaryPath = [[NSBundle mainBundle] pathForResource:@"Hooks" ofType:@""];
         const char *path = [binaryPath cStringUsingEncoding:NSUTF8StringEncoding];
