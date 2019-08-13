@@ -11,6 +11,7 @@
 #import "fishhook/fishhook.h"
 #import <dlfcn.h>
 #import "libffi/ffi.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 @interface Test : NSObject
 
@@ -200,6 +201,14 @@ void testFFIClosure() {
     
     int ret2 = [hookObj fooWithBar:12 baz:45];
     NSLog(@"result: %i", ret2);
+}
+
++ (instancetype)allocWithZone:(struct _NSZone *)zone {
+    ViewController *viewController = [super allocWithZone:zone];
+    [[viewController rac_signalForSelector:@selector(viewDidLoad)] subscribeNext:^(id x) {
+        NSLog(@"调用ViewDidLoad");
+    }];
+    return viewController;
 }
 
 - (void)viewDidLoad {
