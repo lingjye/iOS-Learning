@@ -31,9 +31,13 @@ const char *KVOObserverOldValueKey = "KVOObserverOldValueKey";
         stringByReplacingCharactersInRange:NSMakeRange(0, 1)
                                 withString:[[keyPath substringToIndex:1] capitalizedString]];
     NSString *setterName = [@"set" stringByAppendingString:capitalizedFirstChar];
-
+    
+    // v@:@
+    // v 代表void， i表示int 作为返回值
+    // @:@ 代表传入一个参数
+    // type encodings 参考：https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Articles/ocrtTypeEncodings.html#//apple_ref/doc/uid/TP40008048-CH100-SW1
     class_addMethod(kvoClass, NSSelectorFromString([setterName stringByAppendingString:@":"]),
-                    (IMP)setter, "v@:i");
+                    (IMP)setter, "v@:@");
     
     // 可根据options 进行其他操作, 此处默认new | old
     
