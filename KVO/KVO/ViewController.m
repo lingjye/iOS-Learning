@@ -33,15 +33,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    _person = [[Person alloc] init];
-    _person.name = @"小明";
-
-    //    [_person addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionNew |
-    //    NSKeyValueObservingOptionOld context:nil];
-    [_person lj_addObserver:self
-                 forKeyPath:@"name"
-                    options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
-                    context:nil];
+//    _person = [[Person alloc] init];
+//    _person.name = @"小明";
+//
+//    //    [_person addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionNew |
+//    //    NSKeyValueObservingOptionOld context:nil];
+//    [_person lj_addObserver:self
+//                 forKeyPath:@"name"
+//                    options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
+//                    context:nil];
+    Man *man = [[Man alloc] init];
+    
+    
+    __block int a = 0;
+    while (a <= 5) {
+        dispatch_async(dispatch_get_global_queue(0, 0), ^{
+            a++;
+        });
+    }
+    NSLog(@"%i", a);
 }
 
 

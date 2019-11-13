@@ -10,6 +10,14 @@
 
 @implementation Person
 
++ (void)initialize {
+    NSLog(@"Person---%s", __func__);
+}
+
++ (void)load {
+    NSLog(@"Person---%s", __func__);
+}
+
 //- (void)setName:(NSString *)name {
 //    [self willChangeValueForKey:@"name"];
 //    _name = name;
@@ -20,5 +28,37 @@
 //+ (BOOL)automaticallyNotifiesObserversOfName {
 //    return NO;
 //}
+
+@end
+
+
+
+
+@implementation Man
+
++ (void)initialize {
+    NSLog(@"Man---%s", __func__);
+}
+
++ (void)load {
+    NSLog(@"Man---%s", __func__);
+}
+
+@end
+
+@interface Person (cat)
+
+@end
+
+@implementation Person (cat)
+
++ (void)initialize {
+    NSLog(@"Person_catogory--%s--cat", __func__);
+}
+
++ (void)load {
+    NSLog(@"Person_catogory---%s----cat", __func__);
+}
+
 
 @end

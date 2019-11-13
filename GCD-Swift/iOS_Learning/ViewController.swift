@@ -34,6 +34,15 @@ class ViewController: UIViewController {
 //        queueDispatchWorkItem()
         //5
         queueUpdateUI()
+        
+        var a = 0
+        while a <= 5 {
+            DispatchQueue.global(qos: .userInitiated).async {
+                a += 1;
+            }
+            
+        }
+        print("a=%i",a)
     }
     
     func queue() {
