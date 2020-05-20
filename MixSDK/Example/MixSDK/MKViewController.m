@@ -8,8 +8,8 @@
 
 #import "MKViewController.h"
 #import "MSAnimal.h"
-#import "MixSDK_Example-Swift.h"
-//@import MixSDK;
+//#import "MixSDK_Example-Swift.h"
+@import MixSDK;
 
 @interface MKViewController ()
 
