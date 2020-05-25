@@ -8,7 +8,8 @@
 
 #import "MKViewController.h"
 #import "MSAnimal.h"
-//#import "MixSDK_Example-Swift.h"
+#import "MixSDK_Example-Swift.h"
+
 @import MixSDK;
 
 @interface MKViewController ()
@@ -24,6 +25,13 @@
     [MSAnimal show];
     [MSPeople show];
     [MSModel show];
+    
+    MKSubViewController *subVC = [[MKSubViewController alloc] init];
+    [subVC test];
+}
+
+- (void)test {
+    NSLog(@"%s", __func__);
 }
 
 - (void)didReceiveMemoryWarning

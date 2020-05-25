@@ -7,8 +7,9 @@
 
 import UIKit
 
-open class MSModel: NSObject {
+public class MSModel: NSObject {
     @objc open class func show() {
         MSAnimal.show();
+        MSCat.show();
     }
 }

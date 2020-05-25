@@ -6,7 +6,8 @@
 //  Copyright (c) 2018 lingjye. All rights reserved.
 //
 
-@import UIKit;
+//@import UIKit;
+#import <UIKit/UIKit.h>
 
 @interface MKViewController : UIViewController
 

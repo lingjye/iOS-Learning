@@ -8,6 +8,6 @@
 #ifndef MSHelperHeader_h
 #define MSHelperHeader_h
 
-#import <TXMacro/TXMacroHeader.h>
+//#import <TXMacro/TXMacroHeader.h>
 
 #endif /* MSHelperHeader_h */
