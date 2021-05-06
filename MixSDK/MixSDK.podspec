@@ -31,6 +31,7 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'MixSDK/Classes/**/*'
+  s.dependency 'MixSwift'
   
   # s.resource_bundles = {
   #   'MixSDK' => ['MixSDK/Assets/*.png']

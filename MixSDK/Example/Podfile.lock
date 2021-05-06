@@ -1,23 +1,29 @@
 PODS:
-  - Kiwi (3.0.0)
-  - MixSDK (0.1.0)
+  - MixSDK (0.1.0):
+    - MixSwift
+  - MixSDKTwo (0.1.0):
+    - MixSDK
+    - MixSwift
+  - MixSwift (0.1.0)
 
 DEPENDENCIES:
-  - Kiwi
   - MixSDK (from `../`)
-
-SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
-    - Kiwi
+  - MixSDKTwo (from `../MixSDKTwo`)
+  - MixSwift (from `../MixSwift`)
 
 EXTERNAL SOURCES:
   MixSDK:
     :path: "../"
+  MixSDKTwo:
+    :path: "../MixSDKTwo"
+  MixSwift:
+    :path: "../MixSwift"
 
 SPEC CHECKSUMS:
-  Kiwi: fbeafef0f00e4d8f7dcb3420a4930afe70af77f7
-  MixSDK: 07cde85a22ace54e03f38445c72f061c2167cba8
+  MixSDK: 020b6bd67d8d70bacc77891778d3129c651d7863
+  MixSDKTwo: 7f2f34a71704335b3c724beda29c99bdf6362484
+  MixSwift: 8219436571fd6f309517a39e044402bff5a4d4ce
 
-PODFILE CHECKSUM: 8a637f3ca6c40b4e615f833d2c3879e4898fa2b4
+PODFILE CHECKSUM: ac70465b51b04726aeb3fa6eeec9a6fd344dac18
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.10.0

@@ -6,16 +6,18 @@
 //
 
 #import "MSAnimal.h"
-#import "MixSDK/MixSDK-Swift.h"
+//#import "MixSDK/MixSDK-Swift.h"
+//#import <MixSwift/MixSwift-Swift.h>
+#import "MixSDK-Swift.h"
+@import MixSwift;
 
-//#import <TXMacro/TXMacroHeader.h>
 
 @implementation MSAnimal
 
 + (void)show {
     NSLog(@"%@", [self class]);
     [MSPeople show];
-    
+    [MixSwiftView log:@"123"];
 }
 
 - (void)eat {

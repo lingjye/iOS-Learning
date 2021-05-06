@@ -1,15 +1,17 @@
-use_frameworks!
+# use_frameworks!
 
-platform :ios, '8.0'
+platform :ios, '9.0'
 
-source 'https://github.com/CocoaPods/Specs.git'
+# source 'https://github.com/CocoaPods/Specs.git'
 
 target 'MixSDK_Example' do
   pod 'MixSDK', :path => '../'
+  pod 'MixSwift', :path => '../MixSwift'
+  pod 'MixSDKTwo', :path => '../MixSDKTwo'
 
   target 'MixSDK_Tests' do
     inherit! :search_paths
 
-    pod 'Kiwi'
+    # pod 'Kiwi'
   end
 end
