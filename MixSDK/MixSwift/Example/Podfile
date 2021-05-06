@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'MixSwift_Example' do
+  pod 'MixSwift', :path => '../'
+
+  target 'MixSwift_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

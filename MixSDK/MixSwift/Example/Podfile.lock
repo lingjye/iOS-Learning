@@ -1,0 +1,16 @@
+PODS:
+  - MixSwift (0.1.0)
+
+DEPENDENCIES:
+  - MixSwift (from `../`)
+
+EXTERNAL SOURCES:
+  MixSwift:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MixSwift: 8219436571fd6f309517a39e044402bff5a4d4ce
+
+PODFILE CHECKSUM: 800edc44042fbcd98c6659ed1e66833e2f11e93a
+
+COCOAPODS: 1.10.0
